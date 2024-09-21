@@ -1,1 +1,1 @@
-[Sydnety AI Meetup 2024](https://yuankaiqi.github.io/aimeetup/)
+[Sydnety AI Meetup 2024](sydneyaimeetup.github.io)
