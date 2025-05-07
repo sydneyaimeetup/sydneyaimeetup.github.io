@@ -1,5 +1,10 @@
 /* Owl Carousel Bootstrap Custom CSS */
 
+/* qyk */
+.upcoming {
+	background-color: rgb(8, 123, 92) !important;
+	color: white;
+  }
 /* Header Navigation */
 #top-nav{
 	border-bottom: 1px solid #e1e6dd;
