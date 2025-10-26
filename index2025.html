@@ -238,7 +238,7 @@
       </tr>
       <tr class="success">
         <td>14:00-14:45</td>
-        <td><strong>TBD</strong><br /> Abstract.</td>
+        <td><strong>Resolution-Agnostic Learning: Neural Operators That Scale</strong><br /> Abstract: Neural Operators learn mappings between functions—for example, from boundary or forcing inputs to full solution fields—enabling resolution-agnostic surrogates that run in real time and scale to 3D. This talk introduces the operator-learning paradigm and why it differs from standard pointwise regressors: mesh independence, parameter sharing across resolutions, and generalization to unseen inputs and geometries. I’ll survey core models—DeepONet and the Fourier Neural Operator (FNO)—and then focus on recent advances from our group: Siren-FNO, which augments Fourier layers with sinusoidal activations to recover high-frequency structure and sharp interfaces, and tensorized FNOs such as TT-FNO, which factorize Fourier layers for large memory/parameter savings without sacrificing accuracy. Empirically, these variants improve sample efficiency, capture fine scales more faithfully, and reduce inference latency, making them practical surrogates for complex simulations. I’ll close with a pragmatic checklist—multi-resolution training, normalization, boundary handling, batching on large grids, and evaluation beyond RMSE (spectral error, conservation)—plus short application vignettes from fluid and materials modeling. Attendees will leave with a clear mental model of operator learning, guidance on when to use FNO-style architectures, and actionable tips for deploying scalable, resolution-agnostic surrogates in real pipelines.</td>
         <td>Prof. Junbin Gao</td>
       </tr>
 
