@@ -5,6 +5,22 @@
 	background-color: rgb(8, 123, 92) !important;
 	color: white;
   }
+
+/* Past events: visually separate each event */
+#Past table {
+	margin-bottom: 40px;
+}
+#Past tr.event-spacer td {
+	background: transparent !important;
+	border: none !important;
+	padding: 0 !important;
+	height: 40px;
+}
+
+/* Invited speakers: spacing between each speaker block */
+#invited .row + .row {
+	margin-top: 28px;
+}
 /* Header Navigation */
 #top-nav{
 	border-bottom: 1px solid #e1e6dd;
