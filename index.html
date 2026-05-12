@@ -1,89 +1,1078 @@
- <!-- FlatFy Theme - Andrea Galanti /-->
+<!-- FlatFy Theme - Andrea Galanti /-->
 <!doctype html>
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--> <html> <!--<![endif]-->
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-    <meta name="description" content="Greater Sydney Area AI Meetup ">
-    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#1e3c72">
+    <meta name="description" content="Sydney AI Meetup — monthly seminars and annual symposia for the greater Sydney AI research and engineering community.">
+    <meta name="author" content="Sydney AI Meetup">
 
     <title>Sydney AI Meetup</title>
 
+    <!-- Open Graph / social preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sydney AI Meetup">
+    <meta property="og:description" content="Monthly seminars and annual symposia for the greater Sydney AI research and engineering community.">
+    <meta property="og:url" content="https://sydneyaimeetup.org/">
+    <meta property="og:image" content="https://sydneyaimeetup.org/all.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sydney AI Meetup">
+    <meta name="twitter:description" content="Monthly seminars and annual symposia for the greater Sydney AI research and engineering community.">
+    <meta name="twitter:image" content="https://sydneyaimeetup.org/all.png">
+
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
- 
-    <!-- Custom Google Web Font -->
+
+    <!-- Google Web Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
-	
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
     <!-- Custom CSS-->
     <link href="css/general.css" rel="stylesheet">
-	
-	 <!-- Owl-Carousel -->
-    <link href="css/custom.css" rel="stylesheet">
-	<link href="css/owl.carousel.css" rel="stylesheet">
-    <link href="css/owl.theme.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
-	<link href="css/animate.css" rel="stylesheet">
-	
-	<!-- Magnific Popup core CSS file -->
-	<link rel="stylesheet" href="css/magnific-popup.css"> 
-	
-	<script src="js/modernizr-2.8.3.min.js"></script>  <!-- Modernizr /-->
-    <style>
-        #commitee a:hover {
-          background-color: yellow;
-        }
-        </style>
-	<!--[if IE 9]>
-		<script src="js/PIE_IE9.js"></script>
-	<![endif]-->
-	<!--[if lt IE 9]>
-		<script src="js/PIE_IE678.js"></script>
-	<![endif]-->
 
-	<!--[if lt IE 9]>
-		<script src="js/html5shiv.js"></script>
-	<![endif]-->
+    <!-- Owl-Carousel -->
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+
+    <!-- Magnific Popup core CSS file -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <style>
+        /* Committee section */
+        #commitee { background-color: #f5f7fa; }
+        #commitee .section-heading { text-align: center; margin-bottom: 32px; font-size: 32px; }
+        .committee-row {
+            display: block;
+            margin-bottom: 0;
+        }
+        .committee-card {
+            display: flex;
+            align-items: baseline;
+            gap: 14px;
+            flex: none;
+            background: #fff;
+            border: 1px solid #e3e7ee;
+            border-radius: 6px;
+            padding: 6px 14px;
+            margin-bottom: 5px;
+            text-decoration: none !important;
+            color: inherit !important;
+            transition: background-color 0.12s ease, border-color 0.12s ease;
+        }
+        .committee-card:hover {
+            background: #f8faff !important;
+            border-color: #c9d3e0;
+        }
+        .committee-role {
+            flex: 0 0 140px;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: #2a5298;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+        .committee-name {
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            color: #1a1a1a;
+            line-height: 1.4;
+        }
+        .committee-affil {
+            font-size: 12px;
+            color: #8a93a3;
+            line-height: 1.4;
+            margin-left: 4px;
+        }
+        .committee-affil::before {
+            content: "·";
+            color: #c9d3e0;
+            margin-right: 8px;
+            font-weight: 700;
+        }
+        @media (max-width: 600px) {
+            .committee-card { flex-wrap: wrap; padding: 8px 12px; }
+            .committee-role { flex: 0 0 100%; margin-bottom: 2px; }
+        }
+
+        /* === Typography (item 7) === */
+        body, p, td, li, a, .navbar-default {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        h1, h2, h3, h4, h5, h6, .section-heading, .h1_home, .h3_home, .navbar-brand {
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        /* Modern section headings (Flagship Events, Past Events, Upcoming Events, …) */
+        h3.section-heading {
+            font-size: 40px !important;
+            font-weight: 700;
+            letter-spacing: -0.035em;
+            line-height: 1.1;
+            color: #0f1a30;
+            margin: 0 0 28px 0;
+            position: relative;
+        }
+        /* Centered section headings */
+        #invited h3.section-heading,
+        #commitee h3.section-heading { text-align: center; }
+
+        /* === Intro / scope block === */
+        .intro-block {
+            max-width: 880px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 44px 56px 40px 56px;
+            background: linear-gradient(135deg, #ffffff 0%, #f5f9ff 50%, #eef3fb 100%);
+            border: 1px solid rgba(42, 82, 152, 0.08);
+            border-radius: 18px;
+            box-shadow:
+                0 1px 2px rgba(15, 30, 60, 0.04),
+                0 8px 24px rgba(42, 82, 152, 0.08),
+                0 24px 60px rgba(42, 82, 152, 0.06);
+            position: relative;
+        }
+        .intro-block::before {
+            content: "";
+            position: absolute;
+            inset: -1px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, rgba(42, 82, 152, 0.25), rgba(30, 60, 114, 0));
+            z-index: -1;
+            filter: blur(20px);
+            opacity: 0.5;
+        }
+        @media (max-width: 600px) {
+            .intro-block { padding: 28px 22px; border-radius: 14px; }
+        }
+        .intro-lead {
+            font-family: 'Inter', -apple-system, sans-serif;
+            font-size: 19px;
+            line-height: 1.7;
+            color: #2c3344;
+            margin: 0 0 28px 0;
+            letter-spacing: -0.005em;
+        }
+        .intro-lead strong {
+            color: #0f1a30;
+            font-weight: 700;
+            background: linear-gradient(135deg, #2a5298, #1e3c72);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .intro-lead + .intro-lead { margin-top: -8px; }
+        .intro-link {
+            color: #2a5298 !important;
+            font-weight: 600;
+            text-decoration: none !important;
+            background-image: linear-gradient(transparent calc(100% - 2px), rgba(42, 82, 152, 0.35) 2px);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            transition: background-size 0.25s ease, color 0.15s ease, background-image 0.25s ease;
+            padding: 0 2px;
+            border-radius: 3px;
+        }
+        .intro-link:hover,
+        .intro-link:focus {
+            color: #1e3c72 !important;
+            background-image: linear-gradient(transparent calc(100% - 2px), rgba(42, 82, 152, 1) 2px);
+            text-decoration: none !important;
+        }
+        .intro-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
+            color: #fff !important;
+            padding: 11px 24px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none !important;
+            font-size: 14px;
+            letter-spacing: 0.01em;
+            box-shadow: 0 4px 14px rgba(42, 82, 152, 0.28);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+        .intro-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 22px rgba(42, 82, 152, 0.4);
+            color: #fff !important;
+            text-decoration: none !important;
+        }
+        @media (max-width: 600px) {
+            .intro-lead { font-size: 16px; line-height: 1.65; }
+        }
+
+        /* === Hero (top banner) === */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            background: #f5f8ff;
+            padding: 90px 0 100px 0;
+            color: #0f1a30;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 18% 22%, rgba(42, 82, 152, 0.18) 0%, transparent 45%),
+                radial-gradient(circle at 82% 12%, rgba(106, 17, 203, 0.14) 0%, transparent 50%),
+                radial-gradient(circle at 76% 88%, rgba(30, 60, 114, 0.12) 0%, transparent 55%),
+                radial-gradient(circle at 8% 90%, rgba(26, 188, 156, 0.10) 0%, transparent 45%),
+                linear-gradient(180deg, #f5f8ff 0%, #ecf1fb 100%);
+            pointer-events: none;
+        }
+        .hero-bg::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle at 1px 1px, rgba(15, 30, 60, 0.07) 1px, transparent 1px);
+            background-size: 28px 28px;
+            mask-image: radial-gradient(ellipse at 50% 30%, black 30%, transparent 75%);
+            -webkit-mask-image: radial-gradient(ellipse at 50% 30%, black 30%, transparent 75%);
+            opacity: 0.55;
+        }
+        .hero-inner {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1.05fr 1fr;
+            gap: 56px;
+            align-items: center;
+            max-width: 1170px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+        .hero-left { max-width: 560px; }
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            text-transform: none;
+            color: #0f1a30;
+            background: transparent;
+            padding: 0;
+            border-radius: 0;
+            margin-bottom: 18px;
+        }
+        .hero-eyebrow::before {
+            content: "";
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            background: linear-gradient(135deg, #2a5298 0%, #6a11cb 100%);
+            transform: rotate(45deg);
+            border-radius: 3px;
+            box-shadow: 0 4px 12px rgba(106, 17, 203, 0.3);
+            flex-shrink: 0;
+            margin-right: 2px;
+        }
+        .hero-title {
+            font-family: 'Space Grotesk', 'Inter', sans-serif !important;
+            font-size: 42px !important;
+            font-weight: 700 !important;
+            line-height: 1.1 !important;
+            letter-spacing: -0.035em !important;
+            color: #0f1a30 !important;
+            margin: 0 0 22px 0 !important;
+            text-shadow: none !important;
+        }
+        .hero-title .nowrap { white-space: nowrap; }
+        .hero-subtitle {
+            font-family: ui-monospace, 'JetBrains Mono', 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace;
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: lowercase;
+            color: #3a4458;
+            margin: 0 0 26px 0;
+        }
+        .hero-bullets {
+            list-style: none !important;
+            padding: 0 !important;
+            margin: 0 0 32px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .hero-bullets li {
+            list-style: none !important;
+            display: inline-flex;
+            align-items: center;
+            width: fit-content;
+            gap: 8px;
+            padding: 6px 14px 6px 12px;
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: saturate(160%) blur(8px);
+            -webkit-backdrop-filter: saturate(160%) blur(8px);
+            border: 1px solid rgba(42, 82, 152, 0.12);
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #0f1a30;
+            line-height: 1.35;
+            box-shadow: 0 1px 4px rgba(15, 30, 60, 0.06);
+        }
+        .hero-bullets li::marker { content: "" !important; }
+        .hero-bullets li::before {
+            content: "";
+            flex-shrink: 0;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2a5298, #6a11cb);
+            box-shadow: 0 1px 3px rgba(42, 82, 152, 0.3);
+        }
+        .hero-cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: none !important;
+            transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+        }
+        .hero-cta-primary {
+            background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
+            color: #fff !important;
+            box-shadow: 0 6px 18px rgba(42, 82, 152, 0.32);
+        }
+        .hero-cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(42, 82, 152, 0.42);
+            color: #fff !important;
+        }
+        .hero-cta-secondary {
+            background: rgba(255, 255, 255, 0.7);
+            color: #2a5298 !important;
+            border: 1px solid rgba(42, 82, 152, 0.25);
+        }
+        .hero-cta-secondary:hover {
+            background: #fff;
+            border-color: rgba(42, 82, 152, 0.5);
+            transform: translateY(-2px);
+            color: #1e3c72 !important;
+        }
+        /* Right side: Next Event card on top of a spreading image background */
+        .hero-right {
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-top: 40px;
+            min-height: 360px;
+        }
+        .hero-image-bg {
+            position: absolute;
+            top: -100px;
+            bottom: -100px;
+            left: -350px;
+            right: 30px;
+            z-index: 0;
+            overflow: hidden;
+            -webkit-mask-image:
+                linear-gradient(to right, transparent 0%, rgba(0,0,0,0.25) 8%, rgba(0,0,0,0.75) 22%, black 38%, black 62%, rgba(0,0,0,0.75) 78%, rgba(0,0,0,0.25) 92%, transparent 100%),
+                radial-gradient(circle at 65% center, black 55%, rgba(0,0,0,0.85) 78%, rgba(0,0,0,0.55) 92%, rgba(0,0,0,0.2) 105%);
+            mask-image:
+                linear-gradient(to right, transparent 0%, rgba(0,0,0,0.25) 8%, rgba(0,0,0,0.75) 22%, black 38%, black 62%, rgba(0,0,0,0.75) 78%, rgba(0,0,0,0.25) 92%, transparent 100%),
+                radial-gradient(circle at 65% center, black 55%, rgba(0,0,0,0.85) 78%, rgba(0,0,0,0.55) 92%, rgba(0,0,0,0.2) 105%);
+            -webkit-mask-composite: source-in;
+            mask-composite: intersect;
+            pointer-events: none;
+        }
+        .hero-image-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.2);
+            opacity: 0.85;
+        }
+        a.hero-event-card { position: relative; z-index: 1; }
+        a.hero-event-card {
+            display: block;
+            width: 100%;
+            max-width: 440px;
+            padding: 32px 30px;
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: saturate(160%) blur(10px);
+            -webkit-backdrop-filter: saturate(160%) blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            border-radius: 18px;
+            box-shadow:
+                0 1px 2px rgba(15, 30, 60, 0.04),
+                0 14px 40px rgba(42, 82, 152, 0.16);
+            text-decoration: none !important;
+            color: inherit !important;
+            transition: transform 0.18s ease, box-shadow 0.18s ease;
+            position: relative;
+        }
+        a.hero-event-card::before {
+            content: "";
+            position: absolute;
+            inset: -1px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, rgba(42, 82, 152, 0.35), rgba(106, 17, 203, 0.15));
+            z-index: -1;
+            filter: blur(24px);
+            opacity: 0.6;
+        }
+        a.hero-event-card:hover {
+            transform: translateY(-3px);
+            box-shadow:
+                0 1px 2px rgba(15, 30, 60, 0.04),
+                0 18px 50px rgba(42, 82, 152, 0.22);
+        }
+        .hero-event-kicker {
+            display: inline-block;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #fff;
+            background: linear-gradient(135deg, #2a5298, #1e3c72);
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 14px;
+        }
+        .hero-event-date {
+            font-size: 13px;
+            color: #6a7384;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        .hero-event-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #0f1a30;
+            line-height: 1.2;
+            margin: 0 0 12px 0;
+            letter-spacing: -0.02em;
+        }
+        .hero-event-speakers {
+            font-size: 14px;
+            color: #424c5b;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        .hero-event-cta {
+            display: inline-flex;
+            align-items: center;
+            color: #2a5298 !important;
+            font-weight: 700;
+            font-size: 14px;
+        }
+        @media (max-width: 900px) {
+            .hero { padding: 60px 0 70px 0; }
+            .hero-inner { grid-template-columns: 1fr; gap: 36px; }
+            .hero-title { font-size: 38px !important; }
+            .hero-right { justify-content: stretch; margin-top: 0; }
+            a.hero-event-card { max-width: none; }
+        }
+        @media (max-width: 600px) {
+            .hero-title { font-size: 34px !important; }
+            .hero-event-title { font-size: 20px; }
+        }
+        /* Disable legacy intro-header styles in case any references remain */
+        .intro-header { display: none !important; }
+
+        /* === Modern navbar === */
+        nav.navbar-default {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: saturate(180%) blur(14px);
+            -webkit-backdrop-filter: saturate(180%) blur(14px);
+            border: none;
+            border-bottom: 1px solid rgba(15, 30, 60, 0.08);
+            border-radius: 0;
+            min-height: 64px;
+            margin: 0;
+            box-shadow: 0 1px 12px rgba(15, 30, 60, 0.04);
+        }
+        .navbar-default .navbar-brand {
+            color: #0f1a30 !important;
+            font-family: 'Space Grotesk', 'Inter', sans-serif !important;
+            font-weight: 700 !important;
+            font-size: 20px !important;
+            letter-spacing: -0.02em !important;
+            padding: 20px 15px 20px 15px;
+            display: flex;
+            align-items: center;
+            line-height: 1;
+            height: auto;
+        }
+        .navbar-default .navbar-brand::before {
+            content: "";
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
+            margin-right: 10px;
+            box-shadow: 0 0 0 3px rgba(42, 82, 152, 0.15);
+        }
+        .navbar-default .navbar-brand:hover,
+        .navbar-default .navbar-brand:focus {
+            color: #2a5298 !important;
+            background: transparent !important;
+        }
+        .navbar-default .navbar-nav > li > a {
+            color: #424c5b !important;
+            font-family: 'Inter', sans-serif !important;
+            font-size: 14px !important;
+            font-weight: 500 !important;
+            letter-spacing: 0 !important;
+            text-transform: none !important;
+            padding: 22px 14px !important;
+            position: relative;
+            transition: color 0.15s ease;
+        }
+        .navbar-default .navbar-nav > li > a:hover,
+        .navbar-default .navbar-nav > li > a:focus {
+            color: #2a5298 !important;
+            background: transparent !important;
+        }
+        .navbar-default .navbar-nav > li > a::after {
+            content: "";
+            position: absolute;
+            left: 14px;
+            right: 14px;
+            bottom: 14px;
+            height: 2px;
+            background: #2a5298;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.2s ease;
+            border-radius: 1px;
+        }
+        .navbar-default .navbar-nav > li > a:hover::after,
+        .navbar-default .navbar-nav > li > a:focus::after {
+            transform: scaleX(1);
+        }
+        .navbar-default .navbar-toggle {
+            border-color: #d1d8e0;
+            margin-top: 15px;
+            margin-right: 15px;
+            border-radius: 6px;
+            padding: 8px 10px;
+        }
+        .navbar-default .navbar-toggle .icon-bar {
+            background-color: #0f1a30 !important;
+        }
+        .navbar-default .navbar-toggle:hover,
+        .navbar-default .navbar-toggle:focus {
+            background-color: #f5f7fa !important;
+            border-color: #c9d3e0;
+        }
+        @media (max-width: 767px) {
+            .navbar-default .navbar-nav > li > a { padding: 14px 18px !important; }
+            .navbar-default .navbar-nav > li > a::after { display: none; }
+        }
+
+        /* === Contact section === */
+        #contacts {
+            position: relative;
+            overflow: hidden;
+            background: #0f1a30 !important;
+            border: none !important;
+            padding: 70px 0 !important;
+            color: #fff;
+        }
+        #contacts .contacts-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(124, 58, 237, 0.35) 0%, transparent 40%),
+                radial-gradient(circle at 78% 70%, rgba(42, 82, 152, 0.45) 0%, transparent 45%),
+                linear-gradient(180deg, #0f1a30 0%, #1a1f3a 100%);
+            pointer-events: none;
+        }
+        #contacts .contacts-bg::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+            background-size: 32px 32px;
+            mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+            -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+            opacity: 0.6;
+        }
+        .contacts-inner {
+            position: relative;
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        .contacts-heading {
+            color: #fff !important;
+            text-align: center !important;
+            font-size: 40px !important;
+            margin: 0 0 14px 0 !important;
+        }
+        .contacts-lead {
+            font-family: 'Inter', sans-serif;
+            font-size: 17px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.75);
+            margin: 0 0 32px 0;
+        }
+        .contacts-actions {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 36px;
+        }
+        .contacts-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: none !important;
+            transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+        }
+        .contacts-cta-primary {
+            background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+            color: #fff !important;
+            box-shadow: 0 6px 18px rgba(124, 58, 237, 0.35);
+        }
+        .contacts-cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(124, 58, 237, 0.45);
+            color: #fff !important;
+        }
+        .contacts-cta-icon { font-size: 16px; }
+        .contacts-cta-secondary {
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff !important;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        .contacts-cta-secondary:hover {
+            background: rgba(255, 255, 255, 0.14);
+            border-color: rgba(255, 255, 255, 0.32);
+            transform: translateY(-2px);
+            color: #fff !important;
+        }
+        .contacts-footer {
+            font-family: ui-monospace, 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.4);
+            letter-spacing: 0.5px;
+        }
+        @media (max-width: 600px) {
+            #contacts { padding: 48px 16px !important; }
+            .contacts-heading { font-size: 30px !important; }
+            .contacts-lead { font-size: 15px; }
+            .contacts-cta { width: 100%; justify-content: center; }
+        }
+
+        /* === Participating Organizations === */
+        .orgs-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 18px;
+            align-items: center;
+            justify-items: stretch;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        @media (max-width: 900px) {
+            .orgs-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        }
+        @media (max-width: 600px) {
+            .orgs-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+        .org-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            border: 1px solid #e3e7ee;
+            border-radius: 10px;
+            padding: 18px 22px;
+            height: 100px;
+            text-decoration: none !important;
+            transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+        }
+        .org-logo:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(15, 30, 60, 0.08);
+            border-color: #c9d3e0;
+        }
+        .org-logo img {
+            max-width: 100%;
+            max-height: 56px;
+            object-fit: contain;
+            filter: grayscale(25%);
+            transition: filter 0.15s ease;
+        }
+        .org-logo:hover img { filter: grayscale(0%); }
+
+        /* === Sponsors (tiered) === */
+        .sponsor-tier { margin-bottom: 28px; }
+        .sponsor-tier:last-child { margin-bottom: 0; }
+        .sponsor-tier-label {
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #6a7384;
+            margin-bottom: 16px;
+        }
+        .sponsor-tier-gold .sponsor-tier-label    { color: #b8860b; }
+        .sponsor-tier-silver .sponsor-tier-label  { color: #6c7480; }
+        .sponsor-tier-bronze .sponsor-tier-label  { color: #a06532; }
+        .sponsor-tier-partner .sponsor-tier-label { color: #2a5298; }
+        .sponsor-tier-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 18px;
+        }
+        .sponsor-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            border: 1px solid #e3e7ee;
+            border-radius: 10px;
+            transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+        }
+        .sponsor-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(15, 30, 60, 0.08);
+            border-color: #c9d3e0;
+        }
+        .sponsor-card img { max-width: 100%; object-fit: contain; }
+        .sponsor-card-gold   { padding: 26px 44px; min-width: 280px; }
+        .sponsor-card-gold img   { max-height: 72px; }
+        .sponsor-card-silver { padding: 22px 38px; min-width: 240px; }
+        .sponsor-card-silver img { max-height: 60px; }
+        .sponsor-card-bronze { padding: 18px 28px; min-width: 200px; }
+        .sponsor-card-bronze img { max-height: 50px; }
+        .sponsor-card-tall img { transform: scale(1.45); transform-origin: center; }
+        @media (max-width: 600px) {
+            .sponsor-card-gold, .sponsor-card-silver, .sponsor-card-bronze { min-width: 0; width: 100%; }
+            .org-logo { height: 86px; }
+        }
+
+        /* Tight section spacing so each heading sits close to the section above */
+        #upcoming, #flagship, #Past, #invited, #commitee {
+            padding-top: 32px !important;
+            padding-bottom: 32px !important;
+        }
+        /* Trim the whitespace inside the heading wrapper as well */
+        #upcoming .wow.fadeInLeftBig,
+        #flagship .wow.fadeInLeftBig,
+        #Past .wow.fadeInLeftBig { margin-bottom: 0; }
+        #upcoming .wow.fadeInLeftBig br,
+        #flagship .wow.fadeInLeftBig br,
+        #Past .wow.fadeInLeftBig br { display: none; }
+
+        /* Modern hero heading */
+        .h1_home {
+            font-family: 'Space Grotesk', 'Inter', sans-serif !important;
+            font-size: 76px !important;
+            font-weight: 700 !important;
+            letter-spacing: -0.04em !important;
+            line-height: 1.05;
+        }
+        .h3_home {
+            font-family: 'Inter', sans-serif !important;
+            font-weight: 400 !important;
+            letter-spacing: 0 !important;
+        }
+        @media (max-width: 600px) {
+            h3.section-heading { font-size: 30px !important; }
+            .h1_home { font-size: 44px !important; letter-spacing: -0.03em !important; }
+        }
+
+        /* === Past events modernization (item 6) === */
+        #Past { background-color: #f5f7fa; }
+        #Past .table { display: block; border: none; margin: 0; background: transparent; }
+        #Past .table tbody.event-card {
+            display: block;
+            background: #fff;
+            border: 1px solid #e3e7ee;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(15, 30, 60, 0.05);
+            padding: 22px 26px 20px 26px;
+            margin-bottom: 20px;
+            border-top: 3px solid #2a5298;
+        }
+        #Past .table tr { display: block; background: transparent !important; border: none !important; }
+        #Past .table td { background: transparent !important; border: none !important; }
+        #Past .table tr.info { margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px solid #f0f2f6 !important; }
+        #Past .table tr.info td { display: block; padding: 0; }
+        #Past .table tr.info td:first-child { display: none; }
+        #Past .table tr.info td:last-child strong {
+            display: block;
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            font-size: 21px;
+            font-weight: 700;
+            line-height: 1.3;
+            color: #1a1a1a;
+        }
+        #Past .table tr.success {
+            display: grid;
+            grid-template-columns: 110px 1fr;
+            gap: 4px 18px;
+            padding: 6px 0;
+            align-items: baseline;
+        }
+        #Past .table tr.success td { padding: 0; font-size: 15px; color: #2c2c2c; }
+        #Past .table tr.success td:first-child {
+            color: #8a93a3;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+        }
+        #Past .table tr.success td a { color: #2a5298; }
+        #Past .table tr.success td a[href*="eventbrite"] {
+            display: inline-block;
+            background: #2a5298;
+            color: #fff !important;
+            padding: 6px 16px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 13px;
+            text-decoration: none;
+        }
+        #Past .table tr.success td a[href*="eventbrite"]:hover { background: #1e3c72; }
+        .speaker-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            object-fit: cover;
+            vertical-align: middle;
+            margin-right: 10px;
+            border: 2px solid #fff;
+            box-shadow: 0 1px 4px rgba(15, 30, 60, 0.15);
+        }
+        @media (max-width: 600px) {
+            #Past .table tbody.event-card { padding: 18px 18px 16px 18px; }
+            #Past .table tr.success { grid-template-columns: 1fr; gap: 2px; }
+        }
+
+        /* === Invited Speakers modernization === */
+        #invited { background-color: #f5f7fa; }
+        #invited .section-heading {
+            text-align: center;
+            margin-bottom: 32px;
+            font-size: 32px;
+        }
+        #invited .speaker-card {
+            display: flex !important;
+            align-items: center;
+            gap: 24px;
+            background: #fff;
+            border: 1px solid #e3e7ee;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(15, 30, 60, 0.05);
+            padding: 24px 28px;
+            margin: 0 0 18px 0 !important;
+        }
+        #invited .speaker-card > * {
+            float: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        #invited .speaker-card .col-sm-2 {
+            flex: 0 0 140px;
+            width: 140px !important;
+            text-align: center;
+        }
+        #invited .speaker-card .col-sm-2 center { display: block; }
+        #invited .speaker-card .col-sm-2 img {
+            width: 120px !important;
+            height: 120px !important;
+            margin: 0 auto !important;
+            display: block;
+            object-fit: cover;
+            border-radius: 50% !important;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 10px rgba(15, 30, 60, 0.12);
+        }
+        #invited .speaker-card .col-sm-2 h4 {
+            margin: 12px 0 0 0 !important;
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        #invited .speaker-card .col-sm-2 h4 a {
+            color: #1a1a1a;
+            text-decoration: none;
+            pointer-events: none;
+        }
+        #invited .speaker-card .col-sm-8 {
+            flex: 1 1 auto;
+            width: auto !important;
+            align-self: center;
+            margin-top: -10px !important;
+        }
+        #invited .speaker-card .col-sm-8 p {
+            font-size: 14px;
+            line-height: 1.65;
+            color: #444;
+            margin: 0 !important;
+            text-align: left;
+        }
+        @media (max-width: 600px) {
+            #invited .speaker-card {
+                flex-direction: column;
+                gap: 16px;
+                padding: 20px;
+            }
+            #invited .speaker-card .col-sm-2 { flex: 0 0 auto; width: 100% !important; }
+        }
+
+        /* === Upcoming event hero card === */
+        .upcoming-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+            border: 1px solid #eee;
+        }
+        .upcoming-card-header {
+            background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+            color: #fff;
+            padding: 28px 32px;
+        }
+        .upcoming-card-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.18);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            letter-spacing: 2px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        .upcoming-card-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0 0 4px 0;
+            line-height: 1.25;
+        }
+        .upcoming-card-when {
+            font-size: 15px;
+            opacity: 0.92;
+            margin-top: 8px;
+        }
+        .upcoming-card-body {
+            padding: 24px 32px 28px 32px;
+        }
+        .upcoming-meta-row {
+            display: grid;
+            grid-template-columns: 110px 1fr;
+            gap: 4px 16px;
+            margin-bottom: 8px;
+            align-items: baseline;
+        }
+        .upcoming-meta-label {
+            color: #888;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+        }
+        .upcoming-meta-value {
+            color: #2c2c2c;
+            font-size: 15px;
+        }
+        .upcoming-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+            color: #fff !important;
+            padding: 10px 22px;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            margin-top: 14px;
+            box-shadow: 0 4px 14px rgba(124, 58, 237, 0.28);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+        .upcoming-cta:hover {
+            background: linear-gradient(135deg, #6d28d9 0%, #8b5cf6 100%);
+            text-decoration: none;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(124, 58, 237, 0.4);
+        }
+    </style>
 
 </head>
 
 <body id="home">
 
-	<!-- Preloader -->
-	<div id="preloader">
-		<div id="status"></div>
-	</div>
-	
-	<!-- FullScreen -->
-    <div class="intro-header">
-		<div class="col-xs-12 text-center abcen1">
-			<h1 class="h1_home wow fadeIn" data-wow-delay="0.4s" style="text-shadow: 0 0 8px #000000;">Sydney AI Meetup 2026 <br>Monthly Events</h1>
-			<h3 class="h3_home wow fadeIn" data-wow-delay="0.6s" style="text-shadow: 0px 8px 4px black, 0 0 25px black"> 
-				<!--<a style="color:white" href="https://acl2020.org/" target="_blank"><b>ACL 2020</b></a> </p> -->
-                <!-- 25<sup>th</sup> November (Full Day)</p>
-				Location: Building 6, University of Technology Sydney <a href="https://maps.app.goo.gl/zTrvAT7rBdv12hPP8?g_st=com.google.maps.preview.copy"  style="color:white"  target="_blank" >(Click to see on map)</a> </p> -->
-                 
-			</h3>
-			<!--ul class="list-inline intro-social-buttons">
-				<li><a href="https://twitter.com/galantiandrea" class="btn  btn-lg mybutton_cyano wow fadeIn" data-wow-delay="0.8s"><span class="network-name">Twitter</span></a>
-				</li>
-				<li id="download" ><a href="#downloadlink" class="btn  btn-lg mybutton_standard wow swing wow fadeIn" data-wow-delay="1.2s"><span class="network-name">Free Download</span></a>
-				</li>
-			</ul-->
-		</div>    
-        <!-- /.container -->
-		<div class="col-xs-12 text-center abcen wow fadeIn">
-			<div class="button_down "> 
-				<a class="imgcircle wow bounceInUp" data-wow-duration="1.5s"  href="#scope"> <img class="img_scroll" src="img/icon/circle.png" alt=""> </a>
-			</div>
-		</div>
-    </div>
+
+	<!-- Hero -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-inner">
+            <div class="hero-left">
+                <div class="hero-eyebrow">Sydney AI Meetup</div>
+                <h1 class="hero-title"><span class="nowrap">Research &times; Industry &times; AI</span> <span class="nowrap">@ Sydney</span></h1>
+                <div class="hero-subtitle">create &middot; discuss &middot; connect</div>
+                <ul class="hero-bullets">
+                    <li>Monthly seminars from leading AI researchers</li>
+                    <li>Recurring symposia</li>
+                    <li>Open to HDR students, academics, and industry</li>
+                </ul>
+                <div class="hero-cta-row">
+                    <a class="hero-cta hero-cta-primary" href="https://www.linkedin.com/groups/14517465/" target="_blank">Join Community</a>
+                    <a class="hero-cta hero-cta-secondary" href="#upcoming">See Upcoming Events</a>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="hero-image-bg" aria-hidden="true">
+                    <img src="img/intro/intro7.jpg" alt="">
+                </div>
+                <a class="hero-event-card" href="#upcoming">
+                    <div class="hero-event-kicker">Next Event</div>
+                    <div class="hero-event-date">Date TBA &middot; 2026</div>
+                    <h3 class="hero-event-title">AI Conference Paper Highlights 2026</h3>
+                    <div class="hero-event-speakers">Pre &mdash; CVPR &middot; ICML &nbsp;|&nbsp; Sydney researchers</div>
+                    <span class="hero-event-cta">See details &rarr;</span>
+                </a>
+            </div>
+        </div>
+    </section>
 	
 	<!-- NavBar-->
 	<nav class="navbar-default" role="navigation">
@@ -107,6 +1096,7 @@
 					<!-- <li class="menuItem"><a href="#program">Program</a></li>
 					<li class="menuItem"><a href="#invited">Invited Speakers</a></li> -->
                     <li class="menuItem"><a href="#upcoming">Upcoming Events</a></li>
+                    <li class="menuItem"><a href="#flagship">Flagship Events</a></li>
                     <li class="menuItem"><a href="#orgs">Participating Orgs</a></li>
 					<li class="menuItem"><a href="#commitee">Committee</a></li>	
 					<li class="menuItem"><a href="#sponsor">Sponsor</a></li>					
@@ -118,12 +1108,12 @@
 	</nav> 
 	
 	<!-- Scope -->
-    <div id ="scope" class="content-section-a" style="border-top: 0; margin-bottom: 0; padding-bottom: 60px">
+    <div id ="scope" class="content-section-a" style="border-top: 0; margin-bottom: 0; padding-top: 36px; padding-bottom: 60px">
 
         <div class="container">
-			
+
             <div class="row">
-			
+
 				<!--div class="col-sm-6 pull-right wow fadeInRightBig">
                     <img class="img-responsive " src="img/ipad.png" alt="">
                 </div-->
@@ -134,10 +1124,17 @@
                  
 		
 
-<!-- <h3 id="reverie" class="anchor" aria-hidden="True" href="#reverie">REVERIE Challenge</h3> -->
-<p class="lead"  style="text-align:justify">This AI meetup is designed to enhance collaboration and networking among HDR students, academic staff, and industry professionals. It offers a unique platform for participants to engage in meaningful discussions, foster partnerships, and explore opportunities for external collaboration, joint research projects, and industry internships. By facilitating these interactions, the event aims to drive innovation and promote knowledge exchange within the AI research community.</p >
-
-    <strong> <p>Join the LinkedIn Group <a href="https://www.linkedin.com/groups/14517465/" style="color: blue;" target="_blank">Sydney AI Meetup Community</a> for the latest event update, discussion, and networking.</p> </strong>
+<div class="intro-block">
+    <p class="intro-lead">
+        <strong>Sydney AI Meetup</strong> is an organization that brings together HDR students, researchers, academic staff, and industry professionals in the AI community across greater Sydney, extending to Australia and international AI communities.
+    </p>
+    <p class="intro-lead">
+        Through <a class="intro-link" href="#Past">monthly seminars</a> and <a class="intro-link" href="#flagship">recurring symposia</a>, we create a platform for substantive, tech-oriented discussion, new partnerships, and opportunities for joint research and industry internships &mdash; driving innovation and knowledge exchange in AI.
+    </p>
+    <a class="intro-cta" href="https://www.linkedin.com/groups/14517465/" target="_blank">
+        Join the LinkedIn Community &rarr;
+    </a>
+</div>
 
 <!-- <p>Join the Linkedin Group <a href="https://www.linkedin.com/groups/14517465/" style="color: blue;">Sydney AI Meetup Community</a> for the latest event update, discussion, and networking.</p> -->
 
@@ -160,26 +1157,162 @@
                 <br\>
             </div>
 		    
+            <div class="upcoming-card">
+                <div class="upcoming-card-header">
+                    <span class="upcoming-card-badge">Next Event</span>
+                    <h2 class="upcoming-card-title">AI Conference Paper Highlights 2026</h2>
+                    <div class="upcoming-card-when">Date &amp; time TBA &middot; 2026</div>
+                </div>
+                <div class="upcoming-card-body">
+                    <div class="upcoming-meta-row">
+                        <span class="upcoming-meta-label">Format</span>
+                        <span class="upcoming-meta-value">Pre-conference paper-highlights session &mdash; rising Sydney researchers previewing accepted papers from <strong>CVPR 2026</strong> and <strong>ICML 2026</strong>.</span>
+                    </div>
+                    <div class="upcoming-meta-row">
+                        <span class="upcoming-meta-label">Speakers</span>
+                        <span class="upcoming-meta-value">To be announced &mdash; Sydney-area researchers with accepted CVPR / ICML 2026 papers.</span>
+                    </div>
+                    <div class="upcoming-meta-row">
+                        <span class="upcoming-meta-label">Delivery</span>
+                        <span class="upcoming-meta-value">To be confirmed (in-person + online [TBC])</span>
+                    </div>
+                    <div class="upcoming-meta-row">
+                        <span class="upcoming-meta-label">Register</span>
+                        <span class="upcoming-meta-value">Registration link coming soon.</span>
+                    </div>
+                    <div style="margin-top:18px;font-size:13px;color:#888">
+                        Join the LinkedIn Group <a href="https://www.linkedin.com/groups/14517465/" target="_blank" style="color:#2a5298;font-weight:600">Sydney AI Meetup Community</a> for date, speaker, and registration updates.
+                    </div>
+                </div>
+            </div>
+
+
+                
+
+		    
+		    
+
+          <!-- <div class="container">
+                <div class="wow fadeInRightBig" data-animation-delay="200">
+                </div>
+            </div>  -->
+        </div>
+    </div>
+
+    <!-- flagship events  -->
+    <div id="flagship" class="content-section-b" style="padding-top:0px;padding-bottom:50px">
+        <div class="container">
+            <div class="wow fadeInLeftBig" data-animation-delay="200">
+                <h3 class="section-heading">Flagship Events</h3>
+                <p style="margin-top:-10px;margin-bottom:30px;color:#666">Annual symposia and special multi-talk programs alongside our monthly seminars.</p>
+            </div>
+
+            <div class="row" style="display:flex;flex-wrap:wrap">
+                <div class="col-sm-6 col-md-3" style="margin-bottom:16px">
+                    <a href="index2024.html" style="text-decoration:none;color:inherit">
+                        <div style="border:1px solid #e0e0e0;border-radius:8px;overflow:hidden;background:#fff;height:100%;display:flex;flex-direction:column;box-shadow:0 2px 6px rgba(0,0,0,0.06);transition:transform 0.2s, box-shadow 0.2s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 6px 16px rgba(0,0,0,0.12)'" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 6px rgba(0,0,0,0.06)'">
+                            <div style="background:linear-gradient(135deg,#1e3c72 0%,#2a5298 100%);color:#fff;padding:20px 14px;text-align:center">
+                                <div style="font-size:11px;letter-spacing:2px;opacity:0.85">SYMPOSIUM</div>
+                                <div style="font-size:30px;font-weight:800;line-height:1;margin-top:2px">2024</div>
+                            </div>
+                            <div style="padding:14px;display:flex;flex-direction:column;flex:1">
+                                <h4 style="margin:0 0 6px 0;font-weight:700;font-size:15px;line-height:1.3">Sydney AI Meetup &mdash; Symposium 2024</h4>
+                                <p style="margin:0;color:#555;font-size:12px;line-height:1.4;flex:1">Annual full-day symposium — keynotes, posters, demos at UTS.</p>
+                                <p style="margin:10px 0 0 0;color:#2a5298;font-size:12px;font-weight:600">View program &rarr;</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-sm-6 col-md-3" style="margin-bottom:16px">
+                    <a href="index2025.html" style="text-decoration:none;color:inherit">
+                        <div style="border:1px solid #e0e0e0;border-radius:8px;overflow:hidden;background:#fff;height:100%;display:flex;flex-direction:column;box-shadow:0 2px 6px rgba(0,0,0,0.06);transition:transform 0.2s, box-shadow 0.2s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 6px 16px rgba(0,0,0,0.12)'" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 6px rgba(0,0,0,0.06)'">
+                            <div style="background:linear-gradient(135deg,#0f9d58 0%,#1abc9c 100%);color:#fff;padding:20px 14px;text-align:center">
+                                <div style="font-size:11px;letter-spacing:2px;opacity:0.85">SYMPOSIUM</div>
+                                <div style="font-size:30px;font-weight:800;line-height:1;margin-top:2px">2025</div>
+                            </div>
+                            <div style="padding:14px;display:flex;flex-direction:column;flex:1">
+                                <h4 style="margin:0 0 6px 0;font-weight:700;font-size:15px;line-height:1.3">Sydney AI Meetup &mdash; Symposium 2025</h4>
+                                <p style="margin:0;color:#555;font-size:12px;line-height:1.4;flex:1">Annual symposium — invited talks across vision, language, and ML systems.</p>
+                                <p style="margin:10px 0 0 0;color:#0f9d58;font-size:12px;font-weight:600">View program &rarr;</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-sm-6 col-md-3" style="margin-bottom:16px">
+                    <a href="#paper-highlights-2025" style="text-decoration:none;color:inherit">
+                        <div style="border:1px solid #e0e0e0;border-radius:8px;overflow:hidden;background:#fff;height:100%;display:flex;flex-direction:column;box-shadow:0 2px 6px rgba(0,0,0,0.06);transition:transform 0.2s, box-shadow 0.2s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 6px 16px rgba(0,0,0,0.12)'" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 6px rgba(0,0,0,0.06)'">
+                            <div style="background:linear-gradient(135deg,#c0392b 0%,#e67e22 100%);color:#fff;padding:20px 14px;text-align:center">
+                                <div style="font-size:11px;letter-spacing:2px;opacity:0.85">PAPER HIGHLIGHTS</div>
+                                <div style="font-size:30px;font-weight:800;line-height:1;margin-top:2px">2025</div>
+                                <div style="font-size:12px;font-weight:600;letter-spacing:1px;opacity:0.9;margin-top:4px">CVPR &middot; ICML &middot; ICLR</div>
+                            </div>
+                            <div style="padding:14px;display:flex;flex-direction:column;flex:1">
+                                <h4 style="margin:0 0 6px 0;font-weight:700;font-size:15px;line-height:1.3">AI Conference Paper Highlights 2025</h4>
+                                <p style="margin:0;color:#555;font-size:12px;line-height:1.4;flex:1">Multi-talk session — rising Sydney researchers presenting their 2025 top-venue papers.</p>
+                                <p style="margin:10px 0 0 0;color:#c0392b;font-size:12px;font-weight:600">Jump to details &rarr;</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-sm-6 col-md-3" style="margin-bottom:16px">
+                    <a href="#" style="text-decoration:none;color:inherit">
+                        <div style="border:1px solid #e0e0e0;border-radius:8px;overflow:hidden;background:#fff;height:100%;display:flex;flex-direction:column;box-shadow:0 2px 6px rgba(0,0,0,0.06);transition:transform 0.2s, box-shadow 0.2s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 6px 16px rgba(0,0,0,0.12)'" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 6px rgba(0,0,0,0.06)'">
+                            <div style="background:linear-gradient(135deg,#6a11cb 0%,#2575fc 100%);color:#fff;padding:20px 14px;text-align:center">
+                                <div style="font-size:11px;letter-spacing:2px;opacity:0.85">PAPER HIGHLIGHTS</div>
+                                <div style="font-size:30px;font-weight:800;line-height:1;margin-top:2px">2026</div>
+                                <div style="font-size:12px;font-weight:600;letter-spacing:1px;opacity:0.9;margin-top:4px">Pre &mdash; CVPR &middot; ICML</div>
+                            </div>
+                            <div style="padding:14px;display:flex;flex-direction:column;flex:1">
+                                <h4 style="margin:0 0 6px 0;font-weight:700;font-size:15px;line-height:1.3">AI Conference Paper Highlights 2026</h4>
+                                <p style="margin:0;color:#555;font-size:12px;line-height:1.4;flex:1">Pre-conference session — Sydney researchers previewing accepted CVPR &amp; ICML 2026 papers.</p>
+                                <p style="margin:10px 0 0 0;color:#6a11cb;font-size:12px;font-weight:600">Coming soon &rarr;</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- past events -->
+    <div id ="Past" class="content-section-b" style="padding-top:0px;padding-bottom:50px">
+
+        <div class="container">				
+            <div class="wow fadeInLeftBig" data-animation-delay="200">   
+                <h3 class="section-heading">Past Events &amp; Seminars</h3>
+                <!-- <strong>Poster Instruction:</strong> (1) Poster presentation will be displayed on a large LCD screen in room CB06.04.040. (2) Feel free to prepare your presentation slides for display on the allocated LCD screen. (3) Please bring your laptop if possible; it can be connected to the LCD screen via HDMI. (4) There is no need to print your poster, as no poster boards will be provided. (5) Check the website for your presentation time, and ensure you start promptly.<br><br> -->
+                <!-- <strong>UTS Map</strong>: <a href="https://studentvip.com.au/uts/broadway-markets/maps/153053" target="_blank">Here</a> <br><br> -->
+                <!-- <img src="img/Keynote_speech_room.jpg" alt="" width=33.1% height="200" style="margin-bottom: 20;">
+                <img src="img/Poster_presentation_room.jpg" alt="" width=33.1% height="200" style="margin-bottom: 20;">
+                <img src="img/Demonstration_room.jpg" alt="" width=33.1% height="200" style="margin-bottom: 20;"> -->
+                <br\>
+                <br\>
+            </div>
             <table class="table" style="width:100%">
-                <tr class="upcoming">
+                <tbody class="event-card"><tr class="info">
                     <td>Title</td>
                     <td><strong>NVIDIA GTC Highlight and Top Tech</strong></td>
 
                 </tr>
                 <tr class="success">
-                    <td>Speaker</td>
-                    <td><strong><a href="#invited">Dr Susan Zhang and Dr Johan Barthelemy, NVIDIA </a> </strong>
-                    </td>
+                    <td>Speaker 1</td>
+                    <td><img src="img/organizer/susan.png" alt="Susan Zhang" class="speaker-avatar"><strong><a href="#invited">Dr Susan Zhang, NVIDIA</a></strong></td>
+
+                </tr>
+                <tr class="success">
+                    <td>Speaker 2</td>
+                    <td><img src="img/invited/2026/johan_barthelemy.png" alt="Johan Barthelemy" class="speaker-avatar"><strong><a href="#invited">Dr Johan Barthelemy, NVIDIA</a></strong></td>
 
                 </tr>
                 <tr class="success">
                     <td>Format</td>
-                    <td>Susan will cover the GTC highlights and the Inception program (25 minutes). Johan will present the latest technologies from NVIDIA, such as NemoClaw, as well as any other key developments he considers most significant (25 minutes). This will be followed by a 10-minute Q&amp;A session, for a total duration of 1 hour.
+                    <td>Susan covered the GTC highlights and the NVIDIA Inception program (25 min). Johan presented the latest from NVIDIA, including NemoClaw and other key developments (25 min). Followed by a 10-minute Q&amp;A. Total: 1 hour.
                     </td>
 
                 </tr>
-
-
                 <tr class="success">
                     <td>Date</td>
                     <td><strong>Friday, 1 May 2026</strong></td>
@@ -191,66 +1324,24 @@
 
                 </tr>
                 <tr class="success">
-                    <td>Join</td>
-                    <td><strong> <a href="https://uow-au.zoom.us/j/85197956040?pwd=CKMiFMBsHzXnpIDRdQS35JDw3BgQt7.1" target="_blank">Zoom Link</a> &nbsp;&nbsp;Passcode: <strong>303282</strong></strong></td>
-
-                </tr>
-                <tr class="success">
                     <td>Delivery</td>
                     <td><strong>Online (Zoom)</strong></td>
 
                 </tr>
-
                 <tr class="success">
                     <td>LinkedIn</td>
-                    <td><strong> Join the LinkedIn Group <a href="https://www.linkedin.com/groups/14517465/" style="color: greenyellow;" target="_blank">Sydney AI Meetup Community</a> for the latest event update, discussion, and networking. </strong></td>
+                    <td><strong> Join the LinkedIn Group <a href="https://www.linkedin.com/groups/14517465/" style="color: #2a5298;font-weight:600" target="_blank">Sydney AI Meetup Community</a> for the latest event update, discussion, and networking. </strong></td>
 
                 </tr>
-
-
-
-
-
-
-
-                </table>
-
-
-                
-
-		    
-		    
-
-          <!-- <div class="container">				
-                <div class="wow fadeInRightBig" data-animation-delay="200">
-                </div>
-            </div>  -->
-        </div>
-    </div>
-
-    <!-- past events -->
-    <div id ="Past" class="content-section-b" style="padding-top:0px;padding-bottom:50px">
-
-        <div class="container">				
-            <div class="wow fadeInLeftBig" data-animation-delay="200">   
-                <h3 class="section-heading">Past Events</h3>
-                <!-- <strong>Poster Instruction:</strong> (1) Poster presentation will be displayed on a large LCD screen in room CB06.04.040. (2) Feel free to prepare your presentation slides for display on the allocated LCD screen. (3) Please bring your laptop if possible; it can be connected to the LCD screen via HDMI. (4) There is no need to print your poster, as no poster boards will be provided. (5) Check the website for your presentation time, and ensure you start promptly.<br><br> -->
-                <!-- <strong>UTS Map</strong>: <a href="https://studentvip.com.au/uts/broadway-markets/maps/153053" target="_blank">Here</a> <br><br> -->
-                <!-- <img src="img/Keynote_speech_room.jpg" alt="" width=33.1% height="200" style="margin-bottom: 20;">
-                <img src="img/Poster_presentation_room.jpg" alt="" width=33.1% height="200" style="margin-bottom: 20;">
-                <img src="img/Demonstration_room.jpg" alt="" width=33.1% height="200" style="margin-bottom: 20;"> -->
-                <br\>
-                <br\>
-            </div>
-            <table class="table" style="width:100%">
-                <tr class="info">
+                </tbody>
+                <tbody class="event-card"><tr class="info">
                     <td>Title</td>
                     <td><strong>Optimality and Robustness in Robotic Exploration</strong></td>
 
                 </tr>
                 <tr class="success">
                     <td>Speaker</td>
-                    <td><strong><a href="#invited">Dr Ian Abraham, University of Sydney </a> </strong>
+                    <td><img src="img/invited/2026/ian_abraham.jpeg" alt="Ian Abraham" class="speaker-avatar"><strong><a href="#invited">Dr Ian Abraham, University of Sydney </a> </strong>
                     </td>
 
                 </tr>
@@ -284,19 +1375,18 @@
                 </tr>
                 <tr class="success">
                     <td>LinkedIn</td>
-                    <td><strong> Join the LinkedIn Group <a href="https://www.linkedin.com/groups/14517465/" style="color: greenyellow;" target="_blank">Sydney AI Meetup Community</a> for the latest event update, discussion, and networking. </strong></td>
+                    <td><strong> Join the LinkedIn Group <a href="https://www.linkedin.com/groups/14517465/" style="color: #2a5298;font-weight:600" target="_blank">Sydney AI Meetup Community</a> for the latest event update, discussion, and networking. </strong></td>
 
                 </tr>
-
-                <tr class="event-spacer"><td colspan="2"></td></tr>
-                <tr class="info">
+                </tbody>
+<tbody class="event-card"><tr class="info">
                     <td>Title</td>
                     <td><strong>Reconstructing the Unseen: From Detail Recovery to Structure-Guided 3D Generation</strong></td>
 
                 </tr>
                 <tr class="success">
                     <td>Speaker</td>
-                    <td><strong><a href="#invited">A/Prof Lingqiao Liu, Adelaide University </a> </strong>
+                    <td><img src="img/invited/2026/lingqiao.jpeg" alt="Lingqiao Liu" class="speaker-avatar"><strong><a href="#invited">A/Prof Lingqiao Liu, Adelaide University </a> </strong>
                     </td>
 
                 </tr>
@@ -340,19 +1430,18 @@ Passcode: Dvx5OD.t</td>
                 </tr>
                 <tr class="success">
                     <td>LinkedIn</td>
-                    <td><strong> Join the LinkedIn Group <a href="https://www.linkedin.com/groups/14517465/" style="color: greenyellow;" target="_blank">Sydney AI Meetup Community</a> for the latest event update, discussion, and networking. </strong></td>
+                    <td><strong> Join the LinkedIn Group <a href="https://www.linkedin.com/groups/14517465/" style="color: #2a5298;font-weight:600" target="_blank">Sydney AI Meetup Community</a> for the latest event update, discussion, and networking. </strong></td>
 
                 </tr>
-
-                <tr class="event-spacer"><td colspan="2"></td></tr>
-                <tr class="info">
+                </tbody>
+<tbody class="event-card"><tr class="info">
                     <td>Title</td>
                     <td><strong>Learning to Forget, Learning to Remember</strong></td>
 
                 </tr>
                 <tr class="success">
                     <td>Speaker</td>
-                    <td><strong><a href="#invited">A/Prof Mehrtash Harandi, Monash University </a> </strong>
+                    <td><img src="img/invited/2025/Mehrtash.png" alt="Mehrtash Harandi" class="speaker-avatar"><strong><a href="#invited">A/Prof Mehrtash Harandi, Monash University </a> </strong>
                     </td>
 
                 </tr>
@@ -390,19 +1479,18 @@ In the second part, I turn to the challenge of lifelong learning in State-Space 
                 </tr>
                 <tr class="success">
                     <td>LinkedIn</td>
-                    <td><strong> Join the LinkedIn Group <a href="https://www.linkedin.com/groups/14517465/" style="color: greenyellow;" target="_blank">Sydney AI Meetup Community</a> for the latest event update, discussion, and networking. </strong></td>
+                    <td><strong> Join the LinkedIn Group <a href="https://www.linkedin.com/groups/14517465/" style="color: #2a5298;font-weight:600" target="_blank">Sydney AI Meetup Community</a> for the latest event update, discussion, and networking. </strong></td>
 
                 </tr>
-
-                <tr class="event-spacer"><td colspan="2"></td></tr>
-                <tr class="info">
+                </tbody>
+<tbody class="event-card"><tr class="info">
                     <td>Title</td>
                     <td><strong>Deep Declarative Networks for Shape Design</strong></td>
                     
                 </tr>
                 <tr class="success">
                     <td>Speaker</td>
-                    <td><strong><a href="#invited">Prof.  Stephen Gould, Australian National University </a> </strong>
+                    <td><img src="img/invited/2025/StephenGould.jpeg" alt="Stephen Gould" class="speaker-avatar"><strong><a href="#invited">Prof.  Stephen Gould, Australian National University </a> </strong>
                     </td>
                     
                 </tr>
@@ -436,7 +1524,7 @@ In the second part, I turn to the challenge of lifelong learning in State-Space 
                 </tr>
                 <tr class="success">
                     <td>LinkedIn</td>
-                    <td><strong> Join the LinkedIn Group <a href="https://www.linkedin.com/groups/14517465/" style="color: greenyellow;" target="_blank">Sydney AI Meetup Community</a> for the latest event update, discussion, and networking. </strong></td>
+                    <td><strong> Join the LinkedIn Group <a href="https://www.linkedin.com/groups/14517465/" style="color: #2a5298;font-weight:600" target="_blank">Sydney AI Meetup Community</a> for the latest event update, discussion, and networking. </strong></td>
                     
                 </tr>
                 
@@ -446,19 +1534,21 @@ In the second part, I turn to the challenge of lifelong learning in State-Space 
             
 
         
-                <!-- </table>
+                <!--
+                </tbody>
+</table>
 
 		    <table class="table" style="width:100%"> -->
 
-                <tr class="event-spacer"><td colspan="2"></td></tr>
-                <tr class="info">
+                
+                <tbody class="event-card"><tr class="info">
                     <td>Topic</td>
                     <td><strong>Seminar on AI Agents</strong></td>
                     
                 </tr>
                 <tr class="success">
                     <td>Speaker 1</td>
-                    <td><strong><a href="#invited">Dr. Hung Le, Deakin University</a> </strong><br>
+                    <td><img src="img/invited/2025/HungLe.jpeg" alt="Hung Le" class="speaker-avatar"><strong><a href="#invited">Dr. Hung Le, Deakin University</a> </strong><br>
                     <b>Title:</b> Memory in Autonomous Agents: From Reinforcement Learning to Large Language Models
                         <br>
                         <b>Intro:</b> AI agents learn to make decisions by interacting with environments to achieve goals. Effective learning requires remembering and leveraging past experiences, yet many current AI agents lack efficient memory, leading to slow and resource-intensive training. This challenge is especially pronounced in complex or uncertain environments, where partial observability, noise, and long-term dependencies make learning and decision-making difficult. In this talk, we explore how memory mechanisms have evolved from classical reinforcement learning agents to modern large language model agents, enabling faster learning, richer context representation, and more strategic exploration. Understanding this progression provides valuable insights for designing more capable, adaptive, and sample-efficient AI agents that can better handle real-world challenges.
@@ -467,7 +1557,7 @@ In the second part, I turn to the challenge of lifelong learning in State-Space 
                 </tr>
                 <tr class="success">
                     <td>Speaker 2</td>
-                    <td><strong><a href="#invited">Dr. Jianglin Qiao, University of South Australia</a> </strong>
+                    <td><img src="img/invited/2025/JianglinQiao.jpeg" alt="Jianglin Qiao" class="speaker-avatar"><strong><a href="#invited">Dr. Jianglin Qiao, University of South Australia</a> </strong>
                         <br>
                     <b>Title: </b>   Multi-agent Decision Making under Partial Observability <br>
                     <b>Intro: </b> In many real-world multi-agent systems, decision-making is affected by partial observability, agents cannot access the full state of the environment and must act based on limited observations. When physical separation and mobility constraints restrict agents’ ability to explore and interact, this challenge becomes even more severe, leading to inter-agent partial observability under exploration constraints, where agents can only cooperate with nearby teammates. This situation imposes new demands on achieving effective cooperation. This presentation will first introduce the fundamental principles of multi-agent decision-making under partial observability, then provide an in-depth analysis of how inter-agent partial observability under exploration constraints impacts cooperation and credit assignment, and finally discuss multi-agent reinforcement learning as a solution for decision-making in such settings, with a focus on real-world applications in satellite environments.
@@ -497,12 +1587,11 @@ In the second part, I turn to the challenge of lifelong learning in State-Space 
                 </tr>
                 <tr class="success">
                     <td>LinkedIn</td>
-                    <td><strong> Join the LinkedIn Group <a href="https://www.linkedin.com/groups/14517465/" style="color: greenyellow;" target="_blank">Sydney AI Meetup Community</a> for the latest event update, discussion, and networking. </strong></td>
+                    <td><strong> Join the LinkedIn Group <a href="https://www.linkedin.com/groups/14517465/" style="color: #2a5298;font-weight:600" target="_blank">Sydney AI Meetup Community</a> for the latest event update, discussion, and networking. </strong></td>
                     
                 </tr>
-                
-               <tr class="event-spacer"><td colspan="2"></td></tr>
-               <tr class="info">
+                </tbody>
+<tbody class="event-card" id="paper-highlights-2025"><tr class="info">
                     <td>Title</td>
                     <td><strong>AI Conference (CVPR, ICML, ICLR) Paper Highlights</strong></td>
                     
@@ -524,7 +1613,7 @@ In the second part, I turn to the challenge of lifelong learning in State-Space 
                 </tr>
                 <tr class="success">
                     <td>LinkedIn</td>
-                    <td><strong> Join the LinkedIn Group <a href="https://www.linkedin.com/groups/14517465/" style="color: greenyellow;" target="_blank">Sydney AI Meetup Community</a> for the latest event update, discussion, and networking. </strong></td>
+                    <td><strong> Join the LinkedIn Group <a href="https://www.linkedin.com/groups/14517465/" style="color: #2a5298;font-weight:600" target="_blank">Sydney AI Meetup Community</a> for the latest event update, discussion, and networking. </strong></td>
                     
                 </tr>
          
@@ -543,20 +1632,20 @@ In the second part, I turn to the challenge of lifelong learning in State-Space 
                 </tr>
 
                 <!-- new item -->
-                <tr class="event-spacer"><td colspan="2"></td></tr>
-                <tr class="info">
+                </tbody>
+<tbody class="event-card"><tr class="info">
                     <td>Title</td>
                     <td><strong>Generative Modeling for Clinically Meaningful and Controllable Medical Image Synthesis</strong></td>
                     
                 </tr>
                 <tr class="success">
                     <td>Speaker</td>
-                    <td><strong><a href="#invited">Dr. Mingjie Li, Stanford University</a> </strong></td>
+                    <td><img src="img/invited/2025/mingjie.li" alt="Mingjie Li" class="speaker-avatar"><strong><a href="#invited">Dr. Mingjie Li, Stanford University</a> </strong></td>
                     
                 </tr>
                 <tr class="success">
                     <td>Guest</td>
-                    <td><strong><a href="#invited">Dr. Suneeta Mall, Head of AI Engineering at Harrison AI</a> </strong></td>
+                    <td><img src="img/invited/2025/suneeta.webp" alt="Suneeta Mall" class="speaker-avatar"><strong><a href="#invited">Dr. Suneeta Mall, Head of AI Engineering at Harrison AI</a> </strong></td>
                     
                 </tr>
                 <tr class="success">
@@ -576,7 +1665,7 @@ In the second part, I turn to the challenge of lifelong learning in State-Space 
                 </tr>
                 <tr class="success">
                     <td>LinkedIn</td>
-                    <td><strong> Join the LinkedIn Group <a href="https://www.linkedin.com/groups/14517465/" style="color: greenyellow;" target="_blank">Sydney AI Meetup Community</a> for the latest event update, discussion, and networking. </strong></td>
+                    <td><strong> Join the LinkedIn Group <a href="https://www.linkedin.com/groups/14517465/" style="color: #2a5298;font-weight:600" target="_blank">Sydney AI Meetup Community</a> for the latest event update, discussion, and networking. </strong></td>
                     
                 </tr>
                 
@@ -593,20 +1682,19 @@ In the second part, I turn to the challenge of lifelong learning in State-Space 
                     </td>
                     
                 </tr>
-
-                
-                </table>
+                </tbody>
+</table>
 
             <table class="table" style="width:100%">
-                <tr class="event-spacer"><td colspan="2"></td></tr>
-                <tr class="info">
+                
+                <tbody class="event-card"><tr class="info">
                     <td>Title</td>
                     <td><strong>Boosting Large Language Model Reasoning with Knowledge Graphs</strong></td>
                     
                 </tr>
                 <tr class="success">
                     <td>Speaker</td>
-                    <td><strong><a href="#invited">Prof. Shirui Pan, Griffith University</a> </strong></td>
+                    <td><img src="img/invited/2025/shiruipan.jpg" alt="Shirui Pan" class="speaker-avatar"><strong><a href="#invited">Prof. Shirui Pan, Griffith University</a> </strong></td>
                     
                 </tr>
                 <tr class="success">
@@ -626,7 +1714,7 @@ In the second part, I turn to the challenge of lifelong learning in State-Space 
                 </tr>
                 <tr class="success">
                     <td>LinkedIn</td>
-                    <td><strong> Join the LinkedIn Group <a href="https://www.linkedin.com/groups/14517465/" style="color: greenyellow;" target="_blank">Sydney AI Meetup Community</a> for the latest event update, discussion, and networking. </strong></td>
+                    <td><strong> Join the LinkedIn Group <a href="https://www.linkedin.com/groups/14517465/" style="color: #2a5298;font-weight:600" target="_blank">Sydney AI Meetup Community</a> for the latest event update, discussion, and networking. </strong></td>
                     
                 </tr>
                 
@@ -659,21 +1747,20 @@ In the second part, I turn to the challenge of lifelong learning in State-Space 
                     </td>
                     
                 </tr>
-
-                
-                </table>
+                </tbody>
+</table>
 
 
                 <table class="table" style="width:100%">
-                    <tr class="event-spacer"><td colspan="2"></td></tr>
-                    <tr class="info">
+                    
+                    <tbody class="event-card"><tr class="info">
                         <td>Title</td>
                         <td><strong>3D Generative AI Compression with Context Models</strong></td>
                         
                     </tr>
                     <tr class="success">
                         <td>Speaker</td>
-                        <td><strong><a href="#invited">Prof. Jianfei Cai, Monash University</a> </strong></td>
+                        <td><img src="img/invited/2025/jianfeiCai.jpg" alt="Jianfei Cai" class="speaker-avatar"><strong><a href="#invited">Prof. Jianfei Cai, Monash University</a> </strong></td>
                         
                     </tr>
                     <tr class="success">
@@ -693,7 +1780,7 @@ In the second part, I turn to the challenge of lifelong learning in State-Space 
                     </tr>
                     <tr class="success">
                         <td>LinkedIn</td>
-                        <td><strong> Join the LinkedIn Group <a href="https://www.linkedin.com/groups/14517465/" style="color: greenyellow;" target="_blank">Sydney AI Meetup Community</a> for the latest event update, discussion, and networking. </strong></td>
+                        <td><strong> Join the LinkedIn Group <a href="https://www.linkedin.com/groups/14517465/" style="color: #2a5298;font-weight:600" target="_blank">Sydney AI Meetup Community</a> for the latest event update, discussion, and networking. </strong></td>
                         
                     </tr>
                     
@@ -726,9 +1813,8 @@ In the second part, I turn to the challenge of lifelong learning in State-Space 
                         </td>
                         
                     </tr>
-    
-                    
-                    </table>
+                </tbody>
+</table>
 
 		    
 		    
@@ -750,14 +1836,14 @@ In the second part, I turn to the challenge of lifelong learning in State-Space 
 			
             <div class="row">
 				<div class="container">
-				
+
                 <div class="row wow fadeInRightBig"  data-animation-delay="200">
 					<h3 class="section-heading">Invited Speakers</h3>
                     <p></p>
                     <br>
                 </div>
 
-                <div class="row wow fadeInRightBig"  data-animation-delay="200">
+                <div class="row wow fadeInRightBig speaker-card"  data-animation-delay="200">
                     <div class="col-sm-2 wow"  data-animation-delay="200">
                         <center><img  class="img-responsive img-rounded" style="border-radius: 50%" height="150" width="150" src="img/organizer/susan.png" alt=""></center>
                         <h4 class="section-heading"><center><a href="" target="blank">Dr Susan Zhang</a></center></h4>
@@ -767,7 +1853,7 @@ In the second part, I turn to the challenge of lifelong learning in State-Space 
                     </div>
                 </div>
 
-                <div class="row wow fadeInRightBig"  data-animation-delay="200">
+                <div class="row wow fadeInRightBig speaker-card"  data-animation-delay="200">
                     <div class="col-sm-2 wow"  data-animation-delay="200">
                         <center><img  class="img-responsive img-rounded" style="border-radius: 50%" height="150" width="150" src="img/invited/2026/johan_barthelemy.png" alt=""></center>
                         <h4 class="section-heading"><center><a href="" target="blank">Dr Johan Barthelemy</a></center></h4>
@@ -777,7 +1863,7 @@ In the second part, I turn to the challenge of lifelong learning in State-Space 
                     </div>
                 </div>
 
-                <div class="row wow fadeInRightBig"  data-animation-delay="200">
+                <div class="row wow fadeInRightBig speaker-card"  data-animation-delay="200">
 
                     <div class="col-sm-2 wow"  data-animation-delay="200">
                         <center><img  class="img-responsive img-rounded" style="border-radius: 50%" height="150" width="150" src="img/invited/2026/ian_abraham.jpeg" alt=""></center>
@@ -791,7 +1877,7 @@ In the second part, I turn to the challenge of lifelong learning in State-Space 
 
                 </div>
 
-                <div class="row wow fadeInRightBig"  data-animation-delay="200">
+                <div class="row wow fadeInRightBig speaker-card"  data-animation-delay="200">
 
                     <div class="col-sm-2 wow"  data-animation-delay="200">
                         <center><img  class="img-responsive img-rounded" style="border-radius: 50%" height="150" width="150" src="img/invited/2026/lingqiao.jpeg" alt=""></center>
@@ -807,7 +1893,7 @@ His research spans machine learning, computer vision, and natural language proce
                     
                 </div>
 
-                <div class="row wow fadeInRightBig"  data-animation-delay="200">
+                <div class="row wow fadeInRightBig speaker-card"  data-animation-delay="200">
                     <div class="col-sm-2 wow"  data-animation-delay="200">
                         <center><img  class="img-responsive img-rounded" style="border-radius: 50%" height="150" width="150" src="img/invited/2025/Mehrtash.png" alt=""></center>
                         <h4 class="section-heading"><center><a href="" target="blank">A/Prof Mehrtash Harandi</a></center></h4>
@@ -817,7 +1903,7 @@ His research spans machine learning, computer vision, and natural language proce
                     </div>
                 </div>
 
-                <div class="row wow fadeInRightBig"  data-animation-delay="200">
+                <div class="row wow fadeInRightBig speaker-card"  data-animation-delay="200">
                     <div class="col-sm-2 wow"  data-animation-delay="200">
                         <center><img  class="img-responsive img-rounded" style="border-radius: 50%" height="150" width="150" src="img/invited/2025/StephenGould.jpeg" alt=""></center>
                         <h4 class="section-heading"><center><a href="" target="blank">Prof. Stephen Gould</a></center></h4>
@@ -827,7 +1913,7 @@ His research spans machine learning, computer vision, and natural language proce
                     </div>
                 </div>
 
-                <div class="row wow fadeInRightBig"  data-animation-delay="200">
+                <div class="row wow fadeInRightBig speaker-card"  data-animation-delay="200">
                     <div class="col-sm-2 wow"  data-animation-delay="200">   
                         <center><img  class="img-responsive img-rounded" style="border-radius: 50%" height="150" width="150" src="img/invited/2025/HungLe.jpeg" alt=""></center>
                         <h4 class="section-heading"><center><a href="" target="blank">Dr Hung Le  </a></center></h4>
@@ -837,7 +1923,7 @@ His research spans machine learning, computer vision, and natural language proce
                         <p>Dr. Hung Le is an ARC DECRA Fellow and a Lecturer at Deakin University, specializing in deep reinforcement learning. He leads PhD research in machine learning, reinforcement learning and large language models at the Applied Artificial Intelligence Initiative (A2I2). His work focuses on developing neural memory-augmented agents, with applications in health, robotics, dialogue systems, and natural language processing. Dr. Le regularly publishes in top AI venues such as NeurIPS, ICLR and ICML.</p>
                     </div>
                 </div>
-                <div class="row wow fadeInRightBig"  data-animation-delay="200">
+                <div class="row wow fadeInRightBig speaker-card"  data-animation-delay="200">
                     <div class="col-sm-2 wow"  data-animation-delay="200">   
                         <center><img  class="img-responsive img-rounded" style="border-radius: 50%" height="150" width="150" src="img/invited/2025/JianglinQiao.jpeg" alt=""></center>
                         <h4 class="section-heading"><center><a href="" target="blank">Dr Jianglin Qiao </a></center></h4>
@@ -848,7 +1934,7 @@ His research spans machine learning, computer vision, and natural language proce
                     </div>
                 </div>
                 <!-- past speakers -->
-                <div class="row wow fadeInRightBig"  data-animation-delay="200">
+                <div class="row wow fadeInRightBig speaker-card"  data-animation-delay="200">
                     <div class="col-sm-2 wow"  data-animation-delay="200">   
                         <center><img  class="img-responsive img-rounded" style="border-radius: 50%" height="150" width="150" src="img/invited/2025/mingjie.li" alt=""></center>
                         <h4 class="section-heading"><center><a href="" target="blank">Dr Mingjie Li  </a></center></h4>
@@ -858,7 +1944,7 @@ His research spans machine learning, computer vision, and natural language proce
                         <p>Dr. Mingjie Li is a postdoctoral scholar at the Laboratory of Artificial Intelligence in Medicine and Biomedical Physics at Stanford University. His research focuses on medical generative modeling, with the goal of developing clinically meaningful and controllable image synthesis methods to support diagnosis and treatment planning. He received his Ph.D. from the University of Technology Sydney. His work has been published in top-tier venues including T-PAMI, CVPR, NeurIPS, and ECCV. He also serves as a regular reviewer for leading journals and conferences such as IEEE TNNLS, IEEE ToMM, CVPR, and NeurIPS.</p>
                     </div>
                 </div>
-                <div class="row wow fadeInRightBig"  data-animation-delay="200">
+                <div class="row wow fadeInRightBig speaker-card"  data-animation-delay="200">
                     <div class="col-sm-2 wow"  data-animation-delay="200">   
                         <center><img  class="img-responsive img-rounded" style="border-radius: 50%" height="150" width="150" src="img/invited/2025/suneeta.webp" alt=""></center>
                         <h4 class="section-heading"><center><a href="" target="blank">Dr Suneeta Mall  </a></center></h4>
@@ -868,7 +1954,7 @@ His research spans machine learning, computer vision, and natural language proce
                         <p>Suneeta is passionate about solving real-world problems with engineering, data, science, and machine learning. She's a PhD in applied science with a computer science and engineering background. She has extensive distributed, scalable computing and machine learning experience from IBM Software Labs, Expedita, USyd, Nearmap and more recently harrison.ai. She currently leads the AI Engineering division of harrison.ai, a clinician-led artificial intelligence medical technology company tackling some of the biggest issues in healthcare causing inequitable diagnosis today. She believes in lifelong learning and is passionate about knowledge sharing. She is also an author for O'Reilly and writes technical blogs in her spare time.</p>
                     </div>
                 </div>
-                <div class="row wow fadeInRightBig"  data-animation-delay="200">
+                <div class="row wow fadeInRightBig speaker-card"  data-animation-delay="200">
                     <div class="col-sm-2 wow"  data-animation-delay="200">   
                         <center><img  class="img-responsive img-rounded" style="border-radius: 50%" height="150" width="150" src="img/invited/2025/shiruipan.jpg" alt=""></center>
                         <h4 class="section-heading"><center><a href="" target="blank">Prof. Shirui Pan</a></center></h4>
@@ -878,7 +1964,7 @@ His research spans machine learning, computer vision, and natural language proce
                         <p>Shirui Pan received his Ph.D. in Computer Science from the University of Technology Sydney (UTS) and is a Professor in the School of Information and Communication Technology at Griffith University, Australia. His research focuses on data mining and machine learning and has been published in top venues, including Nature Machine Intelligence, KDD, and ICLR, among others. He has received several prestigious awards, including the 2024 IEEE CIS TNNLS Outstanding Paper Award, the 2020 IEEE ICDM Best Student Paper Award, the 2024 AI’s 10 to Watch recognition, and the 2024 IEEE ICDM Tao Li Award. He is also an ARC Future Fellow.</p>
                     </div>
                 </div>
-                <div class="row wow fadeInRightBig"  data-animation-delay="200">
+                <div class="row wow fadeInRightBig speaker-card"  data-animation-delay="200">
                     <div class="col-sm-2 wow"  data-animation-delay="200">   
                         <center><img  class="img-responsive img-rounded" style="border-radius: 50%" height="150" width="150" src="img/invited/2025/jianfeiCai.jpg" alt=""></center>
                         <h4 class="section-heading"><center><a href="" target="blank">Prof. Jianfei Cai  </a></center></h4>
@@ -899,99 +1985,173 @@ His research spans machine learning, computer vision, and natural language proce
 	</div>
 	
     <!--Participating organizations-->
-    <div id="orgs" class="content-section-b"  style="padding-top:30px" > 
-		
-		<div class="container">
-		        <div class="row wow fadeInRightBig"  data-animation-delay="200">
-                    <h3 class="section-heading">Participating Organizations</h3>
-            
-				
-                    <div class="col-sm-2 wow fadeInRightBig"  data-animation-delay="200">   
-                        <center><img  width="1200"  src="img/orgs/all.png" alt=""></center>
-                    </div>
-                    
-			</div>
+    <div id="orgs" class="content-section-b" style="padding-top:30px">
+        <div class="container">
+            <div class="wow fadeInRightBig" data-animation-delay="200">
+                <h3 class="section-heading">Participating Organizations</h3>
+            </div>
+            <div class="orgs-grid">
+                <a class="org-logo" href="https://www.uts.edu.au/" target="_blank" title="University of Technology Sydney">
+                    <img src="img/orgs/uts.png" alt="University of Technology Sydney">
+                </a>
+                <a class="org-logo" href="https://www.unsw.edu.au/" target="_blank" title="UNSW Sydney">
+                    <img src="img/orgs/unsw.png" alt="UNSW Sydney">
+                </a>
+                <a class="org-logo" href="https://www.sydney.edu.au/" target="_blank" title="University of Sydney">
+                    <img src="img/orgs/usyd.png" alt="University of Sydney">
+                </a>
+                <a class="org-logo" href="https://www.mq.edu.au/" target="_blank" title="Macquarie University">
+                    <img src="img/orgs/mq.jpg" alt="Macquarie University">
+                </a>
+                <a class="org-logo" href="https://www.uow.edu.au/" target="_blank" title="University of Wollongong">
+                    <img src="img/orgs/uow.png" alt="University of Wollongong">
+                </a>
+                <a class="org-logo" href="https://www.westernsydney.edu.au/" target="_blank" title="Western Sydney University">
+                    <img src="img/orgs/wsu.png" alt="Western Sydney University">
+                </a>
+                <a class="org-logo" href="https://www.csiro.au/" target="_blank" title="CSIRO">
+                    <img src="img/orgs/csiro.png" alt="CSIRO">
+                </a>
+            </div>
         </div>
     </div>
 
     <!-- Sponsor -->
-    <div id="sponsor" class="content-section-a" style="padding-top:30px"> 
-		
-		<div class="container">
-		        <div class="row wow fadeInRightBig"  data-animation-delay="200">
-                    <h3 class="section-heading">Sponsors</h3>
-                 
-                    <p>
-                        <!-- <ul>
-                            <li><a href="https://www.uts.edu.au/about/faculty-engineering-and-information-technology"> Faculty of Engineering and IT, University of Technology Sydney</a></li>
-                            <li><a href="https://www.unsw.edu.au/unsw-ai"> UNSW AI Institute</a></li>
-                        </ul>
-                        -->
-                        <strong>Gold Sponsor</strong><br>
-                        <img src="img/sponsor/TikTok-logo-CMYK-Horizontal-Black.png" alt="" width=25% height="130" style="margin-bottom: 20;"> 
-                        <br>
-                        <br>
+    <div id="sponsor" class="content-section-a" style="padding-top:30px">
+        <div class="container">
+            <div class="wow fadeInRightBig" data-animation-delay="200">
+                <h3 class="section-heading">Sponsors</h3>
+            </div>
 
-                        <strong>Silver Sponsor</strong><br>
-                        <img src="img/sponsor/Google logo colour cmyk (forprint).png" alt="" width=25% height="130" style="margin-bottom: 20;"><br>
+            <div class="sponsor-tier sponsor-tier-gold">
+                <div class="sponsor-tier-label">Gold Sponsor</div>
+                <div class="sponsor-tier-row">
+                    <a class="sponsor-card sponsor-card-gold" href="https://www.tiktok.com/" target="_blank" title="TikTok">
+                        <img src="img/sponsor/TikTok-logo-CMYK-Horizontal-Black.png" alt="TikTok">
+                    </a>
+                </div>
+            </div>
 
+            <div class="sponsor-tier sponsor-tier-silver">
+                <div class="sponsor-tier-label">Silver Sponsor</div>
+                <div class="sponsor-tier-row">
+                    <a class="sponsor-card sponsor-card-silver" href="https://about.google/" target="_blank" title="Google">
+                        <img src="img/sponsor/Google logo.png" alt="Google">
+                    </a>
+                </div>
+            </div>
 
-                    <strong>Bronze Sponsors</strong><br><br><br>
-                    <img src="img/sponsor/UNSW_AI_institute_logo.png" alt="" width=25% height="100" style="margin-bottom: 20;">
-                    <img src="img/sponsor/AWS_logo_RGB.png" alt="" width=15% height="100" style="margin-bottom: 20; margin-left: 50px;"> 
-                    
-                    <br> <br> <br> <br>   
-                    <img src="img/sponsor/UTS_faculty_eng_IT_Logo.png" alt="" width=60% height="100" style="margin-bottom: 20;">  
-                    </p>
-                    <br><br><br>
-                    <p> <strong>Sponsors</strong><br>
-                        <img src="img/sponsor/NVLogo_2D.png" alt="" width=15% height="100" style="margin-bottom: 20;">
-                    </p>
-                    
- 	
+            <div class="sponsor-tier sponsor-tier-bronze">
+                <div class="sponsor-tier-label">Bronze Sponsors</div>
+                <div class="sponsor-tier-row">
+                    <a class="sponsor-card sponsor-card-bronze sponsor-card-tall" href="https://www.unsw.edu.au/unsw-ai" target="_blank" title="UNSW AI Institute">
+                        <img src="https://www.unsw.edu.au/content/unsw-sites/au/en/unsw-ai/_jcr_content/root/responsivegrid-layout-fixed-width/responsivegrid-full-bottom/column_layout/par_2_2_50/column_layout/par_1/image.coreimg.82.700.png/1765254394386/2024-07-ai-institute-logo-800x380.png" alt="UNSW AI Institute">
+                    </a>
+                    <a class="sponsor-card sponsor-card-bronze" href="https://aws.amazon.com/" target="_blank" title="Amazon Web Services">
+                        <img src="img/sponsor/AWS_logo_RGB.png" alt="Amazon Web Services">
+                    </a>
+                    <a class="sponsor-card sponsor-card-bronze" href="https://www.uts.edu.au/about/faculty-engineering-and-information-technology" target="_blank" title="UTS Faculty of Engineering and IT">
+                        <img src="img/sponsor/UTS_faculty_eng_IT_Logo.png" alt="UTS Faculty of Engineering and IT">
+                    </a>
+                </div>
+            </div>
 
-			   
-
-			</div>
+            <div class="sponsor-tier sponsor-tier-partner">
+                <div class="sponsor-tier-label">Tech Partner</div>
+                <div class="sponsor-tier-row">
+                    <a class="sponsor-card sponsor-card-bronze" href="https://www.nvidia.com/" target="_blank" title="NVIDIA">
+                        <img src="img/sponsor/NVLogo_2D.png" alt="NVIDIA">
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
 
 	<!-- Committee -->
-    <div id="commitee" class="content-section-b" style="padding-top:30px"> 
-		
-		<div class="container">
-		        <div class="row wow fadeInRightBig"  data-animation-delay="200">
-                    <h3 class="section-heading">Committee</h3>
-                    <!-- <p>(Alpha-Beta order)</p> -->
-                    <p>
-                        
-                        
-                        Chiarman:&nbsp;&nbsp;<a href="https://scholars.uow.edu.au/lei-wang">Lei Wang (UoW)</a>&nbsp;&nbsp;&nbsp;<br>
-                        Treasurer:&nbsp;&nbsp;<a href="https://profiles.uts.edu.au/Qiang.Wu">Qiang Wu (UTS)</a>&nbsp;&nbsp;&nbsp;<br>
-                        Publicity Chair:&nbsp;&nbsp;<a href="https://sites.google.com/site/yuankiqi/home">Yuankai Qi (MQ)</a>&nbsp;&nbsp;&nbsp;<br>
-                        Industry Chair:&nbsp;&nbsp; <a href="https://www.uow.edu.au/about/governance/governance-structure/university-council/susan-zhang/"> Susan Zhang (UoW)&nbsp;&nbsp;&nbsp;</a> <br>
-                        Seminar Chair:&nbsp;&nbsp;<a href="https://www.unsw.edu.au/staff/dong-gong">Dong Gong (UNSW)</a>,&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="https://www.sydney.edu.au/engineering/about/our-people/academic-staff/c-xu.html">Chang Xu (USyd)</a>&nbsp;&nbsp;&nbsp;<br>
+    <div id="commitee" class="content-section-b" style="padding-top:30px">
 
-                        Committee member:&nbsp;&nbsp;<br>
-                          <a href="https://profiles.uts.edu.au/Ling.Chen">Ling Chen (UTS)</a>,&nbsp;&nbsp;&nbsp; 
-                    <a href="https://www.westernsydney.edu.au/staff_profiles/WSU/associate_professor_yi_guo">Yi Guo (WSU)</a>,&nbsp;&nbsp;&nbsp;
-                    <a href="https://scholars.uow.edu.au/markus-hagenbuchner">Markus Hagenbuchner (UoW)</a>,&nbsp;&nbsp;&nbsp;
-                    <a href="https://scholars.uow.edu.au/lam-phung">Son Lam Phung (UoW)</a>,&nbsp;&nbsp;&nbsp;
-                   
-                    <br>
-                    <a href="https://scholar.google.com.au/citations?user=BThVCu8AAAAJ&hl=en">Zhenghao Chen (UoN)</a>,&nbsp;&nbsp;&nbsp;
-                    
-                    <a href="https://www.westernsydney.edu.au/staff_profiles/WSU/doctor_rosalind_wang">Rosalind Wang (WSU)</a>,&nbsp;&nbsp;&nbsp;
-                    
-                    
-                    <a href="https://profiles.uts.edu.au/Yanjun.Zhang">Yanjun Zhang (UTS)</a>,&nbsp;&nbsp;&nbsp;
-                    
-                </p>
-
-
-			</div>
+        <div class="container">
+            <div class="wow fadeInRightBig" data-animation-delay="200">
+                <h3 class="section-heading">Committee</h3>
+            </div>
+            <div class="committee-row">
+                <a class="committee-card" href="https://scholars.uow.edu.au/lei-wang" target="_blank">
+                    <span class="committee-role">Chair</span>
+                    <span class="committee-name">Lei Wang</span>
+                    <span class="committee-affil">University of Wollongong</span>
+                </a>
+            </div>
+            <div class="committee-row">
+                <a class="committee-card" href="https://profiles.uts.edu.au/Qiang.Wu" target="_blank">
+                    <span class="committee-role">Treasurer</span>
+                    <span class="committee-name">Qiang Wu</span>
+                    <span class="committee-affil">University of Technology Sydney</span>
+                </a>
+            </div>
+            <div class="committee-row">
+                <a class="committee-card" href="https://www.unsw.edu.au/staff/dong-gong" target="_blank">
+                    <span class="committee-role">Seminar Chair</span>
+                    <span class="committee-name">Dong Gong</span>
+                    <span class="committee-affil">UNSW</span>
+                </a>
+                <a class="committee-card" href="https://www.sydney.edu.au/engineering/about/our-people/academic-staff/c-xu.html" target="_blank">
+                    <span class="committee-role">Seminar Chair</span>
+                    <span class="committee-name">Chang Xu</span>
+                    <span class="committee-affil">University of Sydney</span>
+                </a>
+            </div>
+            <div class="committee-row">
+                <a class="committee-card" href="https://sites.google.com/site/yuankiqi/home" target="_blank">
+                    <span class="committee-role">Publicity Chair</span>
+                    <span class="committee-name">Yuankai Qi</span>
+                    <span class="committee-affil">Macquarie University</span>
+                </a>
+            </div>
+            <div class="committee-row">
+                <a class="committee-card" href="https://www.uow.edu.au/about/governance/governance-structure/university-council/susan-zhang/" target="_blank">
+                    <span class="committee-role">Industry Chair</span>
+                    <span class="committee-name">Susan Zhang</span>
+                    <span class="committee-affil">University of Wollongong</span>
+                </a>
+            </div>
+            <div class="committee-row committee-members">
+                <a class="committee-card" href="https://profiles.uts.edu.au/Ling.Chen" target="_blank">
+                    <span class="committee-role">Member</span>
+                    <span class="committee-name">Ling Chen</span>
+                    <span class="committee-affil">University of Technology Sydney</span>
+                </a>
+                <a class="committee-card" href="https://www.westernsydney.edu.au/staff_profiles/WSU/associate_professor_yi_guo" target="_blank">
+                    <span class="committee-role">Member</span>
+                    <span class="committee-name">Yi Guo</span>
+                    <span class="committee-affil">Western Sydney University</span>
+                </a>
+                <a class="committee-card" href="https://scholars.uow.edu.au/markus-hagenbuchner" target="_blank">
+                    <span class="committee-role">Member</span>
+                    <span class="committee-name">Markus Hagenbuchner</span>
+                    <span class="committee-affil">University of Wollongong</span>
+                </a>
+                <a class="committee-card" href="https://scholars.uow.edu.au/lam-phung" target="_blank">
+                    <span class="committee-role">Member</span>
+                    <span class="committee-name">Son Lam Phung</span>
+                    <span class="committee-affil">University of Wollongong</span>
+                </a>
+                <a class="committee-card" href="https://scholar.google.com.au/citations?user=BThVCu8AAAAJ&amp;hl=en" target="_blank">
+                    <span class="committee-role">Member</span>
+                    <span class="committee-name">Zhenghao Chen</span>
+                    <span class="committee-affil">University of Newcastle</span>
+                </a>
+                <a class="committee-card" href="https://www.westernsydney.edu.au/staff_profiles/WSU/doctor_rosalind_wang" target="_blank">
+                    <span class="committee-role">Member</span>
+                    <span class="committee-name">Rosalind Wang</span>
+                    <span class="committee-affil">Western Sydney University</span>
+                </a>
+                <a class="committee-card" href="https://profiles.uts.edu.au/Yanjun.Zhang" target="_blank">
+                    <span class="committee-role">Member</span>
+                    <span class="committee-name">Yanjun Zhang</span>
+                    <span class="committee-affil">University of Technology Sydney</span>
+                </a>
+            </div>
         </div>
     </div>
 
@@ -1022,48 +2182,25 @@ His research spans machine learning, computer vision, and natural language proce
         <!-- /.container -->
     <!-- </div> -->
 	
-	<div id="contacts" class="content-section-c ", style="padding-top:30px">
-			 <!-- Contacts -->
-		<div class="container">
-			<div class="row">
-			
-				<!--div class="col-sm-6 pull-right wow fadeInRightBig">
-                    <img class="img-responsive " src="img/ipad.png" alt="">
-                </div-->
-				
-                <div class="wow fadeInLeftBig" data-animation-delay="200">   
-                    <h3 class="section-heading" style="color:white">Contact us</h3>
-					<!--div class="sub-title lead3">Lorem ipsum dolor sit atmet sit dolor greand fdanrh<br> sdfs sit atmet sit dolor greand fdanrh sdfs</div-->
-                    <p class="lead"  style="text-align:left;color:white">
-                        For enquiries, please contact the organizing committee via <u>sydneyaimeetup@mq.edu.au</u>
-						<!-- <i>Prof. Lei Wang: leiw@uow.edu.au</i><br> -->
-                        <!-- <i>Prof. Qiang Wu: qiang.wu@uts.edu.au</i><br>
-                        <i>Dr. Susan Zhang: xiaochen@uow.edu.au</i> -->
-					</p>
-					
-				</div>   
-				<!-- <div class="wow fadeInLeftBig" data-animation-delay="200">   
-                    <h3 class="section-heading"></h3>
-                    <p class="lead"  style="text-align:right">
-						©MULA2019
-					</p>
-					
-				</div>   	 -->				
-            </div>
-			<div class="row">
-			
-						<div class="col-md-6 col-md-offset-3 text-center">
-							<div >
-									<div class="morph-button ">
-										<button type="button"></button>
-										
-									</div>
-							</div>
-						</div>	
+	<div id="contacts" class="content-section-c">
+		<div class="contacts-bg"></div>
+		<div class="container contacts-inner">
+			<h3 class="section-heading contacts-heading">Get in touch</h3>
+			<p class="contacts-lead">For enquiries about events, sponsorship, or speaking opportunities, reach out to the organizing committee.</p>
+			<div class="contacts-actions">
+				<a class="contacts-cta contacts-cta-primary" href="mailto:sydneyaimeetup@mq.edu.au">
+					<span class="contacts-cta-icon">&#9993;</span>
+					sydneyaimeetup@mq.edu.au
+				</a>
+				<a class="contacts-cta contacts-cta-secondary" href="https://www.linkedin.com/groups/14517465/" target="_blank">
+					Join LinkedIn Community &rarr;
+				</a>
 			</div>
-
+			<div class="contacts-footer">
+				&copy; Sydney AI Meetup &middot; sydneyaimeetup.org
+			</div>
 		</div>
-	</div>	
+	</div>
 
    
     <footer>
