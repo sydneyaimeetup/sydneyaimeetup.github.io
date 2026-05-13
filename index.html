@@ -489,10 +489,20 @@
             .hero-title { font-size: 38px !important; }
             .hero-right { justify-content: stretch; margin-top: 0; }
             a.hero-event-card { max-width: none; }
-            .hero-left { max-width: none; text-align: center; }
-            .hero-eyebrow { justify-content: center; }
-            .hero-bullets { align-items: center; }
-            .hero-cta-row { justify-content: center; }
+            .hero-inner { padding-left: 16px !important; padding-right: 24px !important; }
+            .hero-left {
+                max-width: none;
+                text-align: center;
+                margin: 0 auto;
+                width: 100%;
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+            .hero-eyebrow { justify-content: center; margin-left: 0 !important; padding-left: 0 !important; }
+            .hero-title { padding-left: 0 !important; margin-left: 0 !important; }
+            .hero-subtitle { padding-left: 0 !important; margin-left: 0 !important; }
+            .hero-bullets { align-items: center; margin-left: 0 !important; padding-left: 0 !important; }
+            .hero-cta-row { justify-content: center; margin-left: 0 !important; padding-left: 0 !important; }
             /* Contain image to the right column so it doesn't bleed into buttons */
             .hero-image-bg {
                 top: -20px;
@@ -643,10 +653,10 @@
             nav.navbar-default > .container {
                 padding-left: 0 !important;
                 padding-right: 0 !important;
-                position: relative;
                 min-height: 60px;
             }
             .navbar-default .navbar-header {
+                position: relative;
                 margin: 0 !important;
                 min-height: 60px;
             }
@@ -659,6 +669,7 @@
                 margin: 0 !important;
                 height: auto !important;
                 float: none !important;
+                z-index: 2;
             }
             .navbar-default .navbar-toggle {
                 position: absolute !important;
@@ -667,6 +678,7 @@
                 transform: translateY(calc(-50% - 4px)) !important;
                 margin: 0 !important;
                 float: none !important;
+                z-index: 2;
             }
         }
         @media (max-width: 600px) {

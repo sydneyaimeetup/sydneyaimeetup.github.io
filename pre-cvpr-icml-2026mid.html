@@ -632,10 +632,10 @@
             nav.navbar-default > .container {
                 padding-left: 0 !important;
                 padding-right: 0 !important;
-                position: relative;
                 min-height: 60px;
             }
             .navbar-default .navbar-header {
+                position: relative;
                 margin: 0 !important;
                 min-height: 60px;
             }
@@ -648,6 +648,7 @@
                 margin: 0 !important;
                 height: auto !important;
                 float: none !important;
+                z-index: 2;
             }
             .navbar-default .navbar-toggle {
                 position: absolute !important;
@@ -656,6 +657,7 @@
                 transform: translateY(calc(-50% - 4px)) !important;
                 margin: 0 !important;
                 float: none !important;
+                z-index: 2;
             }
         }
         @media (max-width: 600px) {
