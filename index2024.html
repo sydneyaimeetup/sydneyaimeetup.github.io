@@ -478,30 +478,57 @@
         }
         @media (max-width: 900px) {
             .hero { padding: 60px 0 70px 0; }
-            .hero-inner { grid-template-columns: 1fr; gap: 36px; }
+            .hero-inner {
+                padding-left: 24px !important;
+                padding-right: 32px !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                width: 100% !important;
+                box-sizing: border-box;
+                grid-template-columns: 1fr;
+                gap: 36px;
+            }
             .hero-title { font-size: 38px !important; }
             .hero-right { justify-content: stretch; margin-top: 0; }
             a.hero-event-card { max-width: none; }
-        .archive-hero .hero-image-bg {
+            .hero-left {
+                max-width: none;
+                width: 100%;
+                margin: 0 auto !important;
+                padding: 0 !important;
+                display: flex !important;
+                flex-direction: column;
+                align-items: center !important;
+                text-align: center;
+            }
+            .hero-eyebrow { justify-content: center; margin-left: 0 !important; padding-left: 0 !important; }
+            .hero-title { padding-left: 0 !important; margin-left: 0 !important; }
+            .hero-subtitle { padding-left: 0 !important; margin-left: 0 !important; }
+            .hero-bullets { align-items: center; margin-left: 0 !important; padding-left: 0 !important; }
+            .hero-cta-row { justify-content: center; margin-left: 0 !important; padding-left: 0 !important; }
+            /* Contain image to the right column so it doesn't bleed into buttons */
+            .hero-image-bg {
+                top: -20px;
+                bottom: -20px;
+                left: -40px;
+                right: -40px;
+                -webkit-mask-image:
+                    linear-gradient(to right, transparent 0%, rgba(0,0,0,0.4) 6%, black 22%, black 78%, rgba(0,0,0,0.4) 94%, transparent 100%),
+                    radial-gradient(circle at center, black 55%, rgba(0,0,0,0.85) 78%, rgba(0,0,0,0.55) 92%, rgba(0,0,0,0.2) 105%);
+                mask-image:
+                    linear-gradient(to right, transparent 0%, rgba(0,0,0,0.4) 6%, black 22%, black 78%, rgba(0,0,0,0.4) 94%, transparent 100%),
+                    radial-gradient(circle at center, black 55%, rgba(0,0,0,0.85) 78%, rgba(0,0,0,0.55) 92%, rgba(0,0,0,0.2) 105%);
+            }
+            .hero-image-bg img { transform: scale(1.0); }
+            .archive-hero .hero-image-bg {
                 top: -20px;
                 bottom: -20px;
                 left: -40px;
                 right: -40px;
             }
             .archive-hero .hero-image-bg img { transform: scale(1.0); }
-            .hero-inner { padding-left: 16px !important; padding-right: 24px !important; }
-            .hero-left {
-                max-width: none;
-                text-align: center;
-                margin: 0 auto;
-                width: 100%;
-                padding-left: 0 !important;
-                padding-right: 0 !important;
-            }
-            .hero-eyebrow { justify-content: center; margin-left: 0 !important; padding-left: 0 !important; }
-            .hero-cta-row { justify-content: center; margin-left: 0 !important; padding-left: 0 !important; }
-            }
-        @media (max-width: 600px) {
+        }
+            @media (max-width: 600px) {
             .hero-title { font-size: 34px !important; }
             .hero-event-title { font-size: 20px; }
         }
@@ -515,20 +542,15 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            background: #ffffff;
+            background: rgba(255, 255, 255, 0.92);
+            -webkit-backdrop-filter: saturate(180%) blur(14px);
+            backdrop-filter: saturate(180%) blur(14px);
             border: none;
             border-bottom: 1px solid rgba(15, 30, 60, 0.08);
             border-radius: 0;
             min-height: 64px;
             margin: 0;
             box-shadow: 0 1px 12px rgba(15, 30, 60, 0.04);
-        }
-        @supports ((backdrop-filter: blur(14px)) or (-webkit-backdrop-filter: blur(14px))) {
-            nav.navbar-default {
-                background: rgba(255, 255, 255, 0.85);
-                backdrop-filter: saturate(180%) blur(14px);
-                -webkit-backdrop-filter: saturate(180%) blur(14px);
-            }
         }
         body { padding-top: 64px; }
         :target { scroll-margin-top: 80px; }
@@ -608,8 +630,41 @@
             border-color: #c9d3e0;
         }
         @media (max-width: 1200px) {
-            /* Force Bootstrap to keep the navbar in mobile (collapsed) mode up to 1200px */
-            .navbar-default .navbar-toggle { display: block !important; }
+            /* Collapse menu items + force brand to fixed left position */
+            nav.navbar-default > .container {
+                max-width: none !important;
+                width: 100% !important;
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+                min-height: 60px;
+            }
+            .navbar-default .navbar-header {
+                position: relative;
+                margin: 0 !important;
+                min-height: 60px;
+                width: 100% !important;
+            }
+            .navbar-default .navbar-brand {
+                position: absolute !important;
+                left: 22px !important;
+                top: 50% !important;
+                transform: translateY(calc(-50% + 4px)) !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                height: auto !important;
+                float: none !important;
+                z-index: 2;
+            }
+            .navbar-default .navbar-toggle {
+                display: block !important;
+                position: absolute !important;
+                right: 24px !important;
+                top: 50% !important;
+                transform: translateY(calc(-50% - 4px)) !important;
+                margin: 0 !important;
+                float: none !important;
+                z-index: 2;
+            }
             .navbar-default .navbar-collapse:not(.in):not(.collapsing) {
                 display: none !important;
             }
@@ -632,38 +687,7 @@
                 line-height: 1.4 !important;
             }
             .navbar-default .navbar-nav > li > a::after { display: none; }
-            nav.navbar-default > .container {
-                padding-left: 0 !important;
-                padding-right: 0 !important;
-                min-height: 60px;
-            }
-            .navbar-default .navbar-header {
-                position: relative;
-                margin: 0 !important;
-                min-height: 60px;
-            }
-            .navbar-default .navbar-brand {
-                position: absolute !important;
-                left: 40px !important;
-                top: 50% !important;
-                transform: translateY(calc(-50% + 4px)) !important;
-                padding: 0 !important;
-                margin: 0 !important;
-                height: auto !important;
-                float: none !important;
-                z-index: 2;
-            }
-            .navbar-default .navbar-toggle {
-                position: absolute !important;
-                right: 24px !important;
-                top: 50% !important;
-                transform: translateY(calc(-50% - 4px)) !important;
-                margin: 0 !important;
-                float: none !important;
-                z-index: 2;
-            }
         }
-
         /* === Contact section === */
         #contacts {
             position: relative;
@@ -1880,6 +1904,31 @@
 	<script src="js/uiMorphingButton_inflow.js"></script>
 	<!-- Magnific Popup core JS file -->
 	<script src="js/jquery.magnific-popup.js"></script> 
+
+	<script>
+	// Collapse mobile navbar when clicking outside the navbar, or tapping a menu link.
+	(function() {
+		function closeIfOpen() {
+			var collapsed = document.querySelector('.navbar-collapse.in');
+			if (collapsed) {
+				var toggle = document.querySelector('.navbar-default .navbar-toggle');
+				if (toggle) toggle.click();
+			}
+		}
+		document.addEventListener('click', function(e) {
+			var nav = document.querySelector('nav.navbar-default');
+			if (!nav) return;
+			if (nav.contains(e.target)) {
+				// Inside navbar — only close if user tapped a menu link
+				if (e.target.closest && e.target.closest('.navbar-collapse .nav.navbar-nav a')) {
+					setTimeout(closeIfOpen, 50);
+				}
+				return;
+			}
+			closeIfOpen();
+		}, true);  // useCapture: catch the event before anything else can stop it
+	})();
+	</script>
 </body>
 
 </html>
