@@ -10,6 +10,7 @@ industry across the greater Sydney AI community.
 
 - `index.html` — homepage (upcoming + past events, speakers, committee, sponsors)
 - `index2024.html`, `index2025.html` — annual symposium archives
+- `pre-cvpr-icml-2026mid.html` — CVPR · ICML Pre-Conference 2026 event page
 - `*_legacy.html` — legacy layouts, kept for reference
 
 ## Stay in touch
