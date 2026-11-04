@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#1e3c72">
-    <meta name="description" content="Sydney AI Meetup Symposium 2026 — annual symposium. Details to be announced.">
+    <meta name="description" content="A dynamic one-day AI symposium bringing together PhD students, academics and AI industry experts. Wednesday 25 November 2026, UNSW Sydney — registration open.">
     <meta name="author" content="Sydney AI Meetup">
 
     <title>Sydney AI Meetup — Symposium 2026</title>
@@ -13,12 +13,12 @@
     <!-- Open Graph / social preview -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Sydney AI Meetup — Symposium 2026">
-    <meta property="og:description" content="Sydney AI Meetup Symposium 2026 — annual symposium. Details to be announced.">
-    <meta property="og:url" content="https://sydneyaimeetup.org/">
+    <meta property="og:description" content="A dynamic one-day AI symposium bringing together PhD students, academics and AI industry experts. Wednesday 25 November 2026, UNSW Sydney — registration open.">
+    <meta property="og:url" content="https://sydneyaimeetup.org/index2026.html">
     <meta property="og:image" content="https://sydneyaimeetup.org/img/preview.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Sydney AI Meetup — Symposium 2026">
-    <meta name="twitter:description" content="Sydney AI Meetup Symposium 2026 — annual symposium. Details to be announced.">
+    <meta name="twitter:description" content="A dynamic one-day AI symposium bringing together PhD students, academics and AI industry experts. Wednesday 25 November 2026, UNSW Sydney — registration open.">
     <meta name="twitter:image" content="https://sydneyaimeetup.org/img/preview.png">
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -332,7 +332,7 @@
             padding: 0 20px;
             box-sizing: border-box;
         }
-        .hero-left { max-width: 560px; }
+        .hero-left { max-width: 560px; position: relative; z-index: 1; }
         .archive-hero .hero-left { max-width: 600px; }
         .hero-eyebrow {
             display: inline-flex;
@@ -380,16 +380,17 @@
             text-transform: lowercase;
             color: #6a7384;
             margin: 0 0 22px 0;
+            max-width: 460px;
         }
         .hero-desc {
-            max-width: 540px;
+            max-width: 460px;
             font-size: 15px;
             line-height: 1.65;
             color: #424c5b;
             margin: 0 0 18px 0;
         }
         .hero-reg-note {
-            max-width: 540px;
+            max-width: 460px;
             font-size: 14px;
             font-weight: 600;
             line-height: 1.5;
@@ -494,11 +495,15 @@
         .archive-hero .hero-image-bg {
             top: -70px;
             bottom: -70px;
-            left: -300px;
+            left: -140px;
             right: 80px;
         }
         .archive-hero .hero-image-bg img {
             transform: scale(1.1);
+        }
+        /* Narrow desktop: keep the photo out of the hero copy entirely */
+        @media (max-width: 1200px) and (min-width: 901px) {
+            .archive-hero .hero-image-bg { left: -40px; }
         }
 
         a.hero-event-card {

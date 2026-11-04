@@ -920,6 +920,10 @@
         #upcoming .wow.fadeInLeftBig br,
         #flagship .wow.fadeInLeftBig br,
         #Past .wow.fadeInLeftBig br { display: none; }
+        /* Flagship row: fit five cards on one line at desktop width */
+        @media (min-width: 992px) {
+            #flagship .row > .col-md-3 { width: 20%; }
+        }
 
         /* Modern hero heading */
         .h1_home {
@@ -1337,6 +1341,24 @@
             </div>
 
             <div class="row" style="display:flex;flex-wrap:wrap">
+                <div class="col-xs-12 col-sm-6 col-md-3" style="margin-bottom:16px">
+                    <a href="index2026.html" style="text-decoration:none;color:inherit">
+                        <div style="border:1px solid #e0e0e0;border-radius:8px;overflow:hidden;background:#fff;height:100%;display:flex;flex-direction:column;box-shadow:0 2px 6px rgba(0,0,0,0.06);transition:transform 0.2s, box-shadow 0.2s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 6px 16px rgba(0,0,0,0.12)'" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 6px rgba(0,0,0,0.06)'">
+                            <div style="background:linear-gradient(135deg,#0b7285 0%,#15aabf 100%);color:#fff;padding:20px 14px;text-align:center">
+                                <div style="font-size:11px;letter-spacing:2px;opacity:0.85">SYMPOSIUM</div>
+                                <div style="font-size:30px;font-weight:800;line-height:1;margin-top:2px">2026</div>
+                                <div style="font-size:12px;font-weight:600;letter-spacing:1px;opacity:0.9;margin-top:4px">25 Nov &middot; UNSW</div>
+                            </div>
+                            <div style="padding:14px;display:flex;flex-direction:column;flex:1">
+                                <span style="display:inline-block;align-self:flex-start;background:#e3fafc;color:#0b7285;padding:2px 9px;border-radius:10px;font-size:10px;font-weight:700;letter-spacing:1px;margin-bottom:8px">REGISTRATION OPEN</span>
+                                <h4 style="margin:0 0 6px 0;font-weight:700;font-size:15px;line-height:1.3">Sydney AI Meetup &mdash; Symposium 2026</h4>
+                                <p style="margin:0;color:#555;font-size:12px;line-height:1.4;flex:1">One-day symposium — PhD students, academics and AI industry experts at UNSW.</p>
+                                <p style="margin:10px 0 0 0;color:#0b7285;font-size:12px;font-weight:600">Details &amp; registration &rarr;</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
                 <div class="col-xs-12 col-sm-6 col-md-3" style="margin-bottom:16px">
                     <a href="index2024.html" style="text-decoration:none;color:inherit">
                         <div style="border:1px solid #e0e0e0;border-radius:8px;overflow:hidden;background:#fff;height:100%;display:flex;flex-direction:column;box-shadow:0 2px 6px rgba(0,0,0,0.06);transition:transform 0.2s, box-shadow 0.2s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 6px 16px rgba(0,0,0,0.12)'" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 6px rgba(0,0,0,0.06)'">
