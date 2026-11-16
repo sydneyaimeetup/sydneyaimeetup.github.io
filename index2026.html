@@ -1353,6 +1353,59 @@
             #program .table tr td:nth-child(3) { text-align: left; }
         }
 
+        /* === Poster presentations === */
+        #posters .poster-lead {
+            color: #6a7384;
+            font-size: 15px;
+            line-height: 1.6;
+            max-width: 720px;
+            margin: 10px 0 24px 0;
+        }
+        #posters .poster-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #posters .poster-item {
+            display: grid;
+            grid-template-columns: 44px 1fr 190px;
+            gap: 18px;
+            align-items: start;
+            background: #fff;
+            border: 1px solid #e3e7ee;
+            border-radius: 8px;
+            padding: 14px 18px;
+            margin-bottom: 8px;
+            transition: box-shadow 0.15s ease;
+        }
+        #posters .poster-item:hover { box-shadow: 0 4px 14px rgba(15, 30, 60, 0.06); }
+        #posters .poster-num {
+            font-family: ui-monospace, 'JetBrains Mono', 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace;
+            font-size: 13px;
+            font-weight: 600;
+            color: #2a5298;
+            padding-top: 2px;
+        }
+        #posters .poster-title {
+            font-size: 14.5px;
+            font-weight: 600;
+            color: #0f1a30;
+            line-height: 1.4;
+            margin-bottom: 3px;
+        }
+        #posters .poster-meta { font-size: 13px; color: #6a7384; line-height: 1.5; }
+        #posters .poster-venue {
+            font-size: 13px;
+            font-weight: 500;
+            color: #6a7384;
+            text-align: right;
+            padding-top: 2px;
+        }
+        @media (max-width: 760px) {
+            #posters .poster-item { grid-template-columns: 34px 1fr; gap: 4px 12px; padding: 14px 16px; }
+            #posters .poster-venue { grid-column: 2; text-align: left; margin-top: 4px; }
+        }
+
         /* === Program: panel session row (title + speaker photos) === */
         #program .table tr.program-panel { grid-template-columns: 130px 1fr; }
         #program .program-tag {
@@ -1468,6 +1521,7 @@
 					<!-- <li class="menuItem"><a href="#submit">Submission</a></li> -->
 					<!-- <li class="menuItem"><a href="#proceedings">Proceedings</a></li> -->
 					<li class="menuItem"><a href="#program">Program</a></li>
+					<li class="menuItem"><a href="#posters">Posters</a></li>
 					<li class="menuItem"><a href="#invited">Invited Speakers</a></li>
                     <li class="menuItem"><a href="#orgs">Participating Orgs</a></li>
 					<li class="menuItem"><a href="#commitee">Working Group</a></li>	
@@ -1599,6 +1653,180 @@
                 </table>
 
                 <p style="color:#888;font-size:14px;margin-top:18px">Full program to be announced.</p>
+        </div>
+    </div>
+
+    <!-- Poster Presentations -->
+    <div id="posters" class="content-section-a">
+
+        <div class="container">
+                <div class="wow fadeInLeftBig" data-animation-delay="200">
+                    <h3 class="section-heading">Poster Presentations</h3>
+                    <p class="poster-lead">20 posters from PhD students and researchers across the Sydney AI community, covering work published at this year&rsquo;s major AI venues.</p>
+                </div>
+
+                <ol class="poster-list">
+                    <li class="poster-item">
+                        <span class="poster-num">01</span>
+                        <div class="poster-main">
+                            <div class="poster-title">Stability and Efficiency in Hedonic Project Games</div>
+                            <div class="poster-meta">Jaber Valizadeh &middot; Western Sydney University</div>
+                        </div>
+                        <span class="poster-venue">IJCAI 2026</span>
+                    </li>
+                    <li class="poster-item">
+                        <span class="poster-num">02</span>
+                        <div class="poster-main">
+                            <div class="poster-title">DENOTER: Dual cascadEd iNformatiOn filTERing for robust sequential recommendation</div>
+                            <div class="poster-meta">Wangli Yang &middot; University of Wollongong</div>
+                        </div>
+                        <span class="poster-venue">Pattern Recognition 2026</span>
+                    </li>
+                    <li class="poster-item">
+                        <span class="poster-num">03</span>
+                        <div class="poster-main">
+                            <div class="poster-title">Towards Visually Grounded Multimodal Summarization via Cross-Modal Transformer and Gated Attention</div>
+                            <div class="poster-meta">Abid Ali &middot; Macquarie University</div>
+                        </div>
+                        <span class="poster-venue">Findings of ACL 2026</span>
+                    </li>
+                    <li class="poster-item">
+                        <span class="poster-num">04</span>
+                        <div class="poster-main">
+                            <div class="poster-title">Learning Minimal Sufficient Evidence Graphs for GraphRAG via Nash-Guided Optimization</div>
+                            <div class="poster-meta">Hao Wu &middot; University of Wollongong</div>
+                        </div>
+                        <span class="poster-venue">NeurIPS 2026</span>
+                    </li>
+                    <li class="poster-item">
+                        <span class="poster-num">05</span>
+                        <div class="poster-main">
+                            <div class="poster-title">D2Cache: Second-Order Delta Caching for Higher Video Diffusion Acceleration</div>
+                            <div class="poster-meta">Enhuai Liu &middot; University of Sydney</div>
+                        </div>
+                        <span class="poster-venue">CVPR 2026</span>
+                    </li>
+                    <li class="poster-item">
+                        <span class="poster-num">06</span>
+                        <div class="poster-main">
+                            <div class="poster-title">PARE: Pruning and Adaptive Routing for Efficient Video Generation</div>
+                            <div class="poster-meta">Yutong Wang &middot; University of Sydney</div>
+                        </div>
+                        <span class="poster-venue">NeurIPS 2026</span>
+                    </li>
+                    <li class="poster-item">
+                        <span class="poster-num">07</span>
+                        <div class="poster-main">
+                            <div class="poster-title">MILES: Modular Instruction Memory with Learnable Selection for Self-Improving LLM Reasoning</div>
+                            <div class="poster-meta">Ruilin Tong &middot; UNSW Sydney</div>
+                        </div>
+                        <span class="poster-venue">NeurIPS 2026</span>
+                    </li>
+                    <li class="poster-item">
+                        <span class="poster-num">08</span>
+                        <div class="poster-main">
+                            <div class="poster-title">MR-MPCC: Model Predictive Contouring Control for Robotic Manipulator Tracking under Moving Reference Frames</div>
+                            <div class="poster-meta">Chonghao Cheng &middot; University of Technology Sydney</div>
+                        </div>
+                        <span class="poster-venue">IROS 2026</span>
+                    </li>
+                    <li class="poster-item">
+                        <span class="poster-num">09</span>
+                        <div class="poster-main">
+                            <div class="poster-title">ProCTI: Prototype-Refined Global Conditioning for Diffusion-Based Time Series Imputation</div>
+                            <div class="poster-meta">Fariza Rashid &middot; University of Sydney</div>
+                        </div>
+                        <span class="poster-venue">NeurIPS 2026</span>
+                    </li>
+                    <li class="poster-item">
+                        <span class="poster-num">10</span>
+                        <div class="poster-main">
+                            <div class="poster-title">Early Semantic Grounding in Image Editing Models for Zero-Shot Referring Image Segmentation</div>
+                            <div class="poster-meta">Jingxuan He &middot; University of Sydney</div>
+                        </div>
+                        <span class="poster-venue">NeurIPS 2026</span>
+                    </li>
+                    <li class="poster-item">
+                        <span class="poster-num">11</span>
+                        <div class="poster-main">
+                            <div class="poster-title">Flexible and scalable federated learning with deep feature prompts for digital pathology</div>
+                            <div class="poster-meta">Cong Cong &middot; Macquarie University</div>
+                        </div>
+                        <span class="poster-venue">npj Digital Medicine 2026</span>
+                    </li>
+                    <li class="poster-item">
+                        <span class="poster-num">12</span>
+                        <div class="poster-main">
+                            <div class="poster-title">VideoCoF: Unified Video Editing with Temporal Reasoner / Infinity Shots: Chunk-wise Learning for Infinite Multi-Shot Audio-Video Generation</div>
+                            <div class="poster-meta">Xiangpeng Yang &middot; University of Technology Sydney</div>
+                        </div>
+                        <span class="poster-venue">CVPR 2026</span>
+                    </li>
+                    <li class="poster-item">
+                        <span class="poster-num">13</span>
+                        <div class="poster-main">
+                            <div class="poster-title">Mutual Predictability Decomposition: Learning Interpretable Cross-Set Structure via Bi-Directional Prediction</div>
+                            <div class="poster-meta">Zixi Qin &middot; University of Wollongong</div>
+                        </div>
+                        <span class="poster-venue">NeurIPS 2026</span>
+                    </li>
+                    <li class="poster-item">
+                        <span class="poster-num">14</span>
+                        <div class="poster-main">
+                            <div class="poster-title">Catching the Details: Self-Distilled RoI Predictors for Fine-Grained MLLM Perception</div>
+                            <div class="poster-meta">Yuheng Shi &middot; University of Sydney</div>
+                        </div>
+                        <span class="poster-venue">ICLR 2026</span>
+                    </li>
+                    <li class="poster-item">
+                        <span class="poster-num">15</span>
+                        <div class="poster-main">
+                            <div class="poster-title">MedHEB: Benchmarking Medical Embeddings Across Heterogeneous Clinical Evidence</div>
+                            <div class="poster-meta">Yingshu Li &middot; University of Sydney</div>
+                        </div>
+                        <span class="poster-venue">NeurIPS 2026</span>
+                    </li>
+                    <li class="poster-item">
+                        <span class="poster-num">16</span>
+                        <div class="poster-main">
+                            <div class="poster-title">Learning a Task-Adaptive Low-Dimensional Semantic Space for Improved Visual Classification</div>
+                            <div class="poster-meta">Nikalal Tharindu Kumara Kaldera Helessage &middot; University of Wollongong</div>
+                        </div>
+                        <span class="poster-venue">NeurIPS 2026</span>
+                    </li>
+                    <li class="poster-item">
+                        <span class="poster-num">17</span>
+                        <div class="poster-main">
+                            <div class="poster-title">Hyperspherical Local Margin Retraction for Zero-Shot Instance-Wise Machine Unlearning</div>
+                            <div class="poster-meta">Hongyi Lyu &middot; Macquarie University</div>
+                        </div>
+                        <span class="poster-venue">NeurIPS 2026</span>
+                    </li>
+                    <li class="poster-item">
+                        <span class="poster-num">18</span>
+                        <div class="poster-main">
+                            <div class="poster-title">Little by Little: Continual Learning via Incremental Mixture of Rank-1 Associative Memory Experts</div>
+                            <div class="poster-meta">Haodong Lu &middot; UNSW Sydney</div>
+                        </div>
+                        <span class="poster-venue">ICML 2026</span>
+                    </li>
+                    <li class="poster-item">
+                        <span class="poster-num">19</span>
+                        <div class="poster-main">
+                            <div class="poster-title">On Token&rsquo;s Dilemma: Dynamic MoE with Drift-Aware Token Assignment for Continual Learning of Large Vision Language Models</div>
+                            <div class="poster-meta">Haodong Lu &middot; UNSW Sydney</div>
+                        </div>
+                        <span class="poster-venue">CVPR 2026</span>
+                    </li>
+                    <li class="poster-item">
+                        <span class="poster-num">20</span>
+                        <div class="poster-main">
+                            <div class="poster-title">Take Only What You Need: Rank Minimization as an Implicit Forgetting Regularizer in Continual Learning</div>
+                            <div class="poster-meta">Haodong Lu &middot; UNSW Sydney</div>
+                        </div>
+                        <span class="poster-venue">Findings of EMNLP 2026</span>
+                    </li>
+                </ol>
         </div>
     </div>
 
