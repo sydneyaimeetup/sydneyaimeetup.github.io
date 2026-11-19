@@ -1408,6 +1408,35 @@
 
         /* === Program: panel session row (title + speaker photos) === */
         #program .table tr.program-panel { grid-template-columns: 152px 1fr; }
+        #program .short-talk {
+            margin-top: 12px;
+            padding: 12px 14px;
+            background: rgba(255, 255, 255, 0.72);
+            border: 1px solid #e3e7ee;
+            border-radius: 7px;
+        }
+        #program .short-talk + .short-talk { margin-top: 8px; }
+        #program .short-talk-title {
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            font-size: 14.5px;
+            font-weight: 700;
+            color: #0f1a30;
+            line-height: 1.35;
+        }
+        #program .short-talk-who {
+            font-size: 12.5px;
+            color: #4a5566;
+            line-height: 1.45;
+            margin-top: 5px;
+        }
+        #program .short-talk-who strong {
+            display: inline !important;
+            font-family: inherit !important;
+            font-size: inherit !important;
+            font-weight: 600 !important;
+            color: #2a5298 !important;
+            margin: 0 !important;
+        }
         #program .program-tag {
             display: inline-block;
             background: #e7f0fb;
@@ -1729,6 +1758,10 @@
                     <td>
                       <span class="program-tag">CLOSING</span>
                       <strong>Industry short talks, awards &amp; social time</strong>
+                      <div class="short-talk">
+                        <div class="short-talk-title">Beyond the Prompt: Scaling AI Experiments Across Models and Executions</div>
+                        <div class="short-talk-who"><strong>Bob Lu</strong> &middot; Co-founder, CogFoundry.ai &middot; 15 min</div>
+                      </div>
                     </td>
                     <td></td>
                   </tr>
@@ -1947,6 +1980,21 @@
                         <p style="margin:18px 0 8px 0;padding-top:16px;border-top:1px solid #e3e7ee"><strong style="font-family:'Space Grotesk','Inter',sans-serif;font-size:16px;color:#0f1a30">Simulate First, Deploy Everywhere: The Physical AI Workflow</strong></p>
                         <p style="color:#4a5566;font-size:13.5px;line-height:1.65;margin:0">A practical walkthrough of how robots and autonomous systems are trained in simulation and deployed at the edge, from Omniverse and Cosmos to Isaac and Jetson Thor.</p>
                         <p style="color:#888;font-size:13px;margin-top:12px">Keynote &middot; 3:00pm&ndash;3:45pm, Wednesday 25 November 2026</p>
+                    </div>
+                </div>
+
+                <div class="row wow fadeInRightBig speaker-card" data-animation-delay="200">
+                    <div class="col-sm-3 wow" data-animation-delay="200">
+                        <center><img class="img-responsive img-rounded" style="border-radius: 50%; object-fit: cover" height="150" width="150" src="img/invited/2026/bob_lu.jpg" alt="Bob Lu"></center>
+                        <h4 class="section-heading"><center>Bob Lu</center></h4>
+                        <p style="text-align:center;color:#8a93a3;font-size:13px;line-height:1.5;margin:9px 0 0 0">Co-founder<br>CogFoundry.ai</p>
+                    </div>
+                    <div class="col-sm-8 col-md-offset-1 wow" style="text-align:justify" data-animation-delay="200">
+                        <span style="display:inline-block;background:#e7f0fb;color:#2a5298;padding:3px 12px;border-radius:12px;font-size:11px;font-weight:700;letter-spacing:1.2px;margin-bottom:12px">INDUSTRY SHORT TALK</span>
+                        <p>Bob Lu is a co-founder of CogFoundry.ai, an AI technology company focused on making AI execution scalable. He holds an Executive MBA from the University of Birmingham and has held senior technical and management roles at leading technology companies, including Motorola in the UK and Qihoo 360 in China. Before co-founding CogFoundry, he co-founded HomeOn, a Sydney-based company specialising in real estate big data and AI. Today, his work focuses on making AI capabilities more accessible and turning them into practical, scalable business outcomes.</p>
+                        <p style="margin:18px 0 8px 0;padding-top:16px;border-top:1px solid #e3e7ee"><strong style="font-family:'Space Grotesk','Inter',sans-serif;font-size:16px;color:#0f1a30">Beyond the Prompt: Scaling AI Experiments Across Models and Executions</strong></p>
+                        <p style="color:#4a5566;font-size:13.5px;line-height:1.65;margin:0">For most people today, interacting with AI still means asking a question and receiving an answer. But what happens when we move beyond individual prompts and start treating AI as an engine for systematic experimentation? Researchers routinely explore different hypotheses, vary experimental conditions, collect observations and compare results. Could we apply the same methodology to AI itself? In this talk, I will explore how access to multiple AI models, combined with systematic, large-scale execution, could transform the way we experiment, create and solve problems. I will also demonstrate how a single task can be transformed into hundreds of coordinated AI executions.</p>
+                        <p style="color:#888;font-size:13px;margin-top:12px">Industry short talk &middot; 4:30pm&ndash;5:30pm session, Wednesday 25 November 2026</p>
                     </div>
                 </div>
 
