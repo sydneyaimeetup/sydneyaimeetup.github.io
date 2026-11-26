@@ -367,6 +367,16 @@
             color: #424c5b;
             margin: 0;
         }
+        .recap-note {
+            font-size: 12px;
+            line-height: 1.6;
+            color: #6b7585;
+            margin: 14px 0 0 0;
+            padding-top: 12px;
+            border-top: 1px solid #f0f2f6;
+        }
+        .recap-note strong { color: #424c5b; font-weight: 600; }
+        .recap-span { grid-column: 1 / -1; }
         @media (max-width: 760px) {
             .recap-block { grid-template-columns: 1fr; }
         }
@@ -1747,10 +1757,18 @@
 
 <div class="recap-block">
     <div class="recap-card recap-awards">
-        <div class="recap-kicker">Best Poster Awards</div>
-        <p class="recap-text">TBD</p>
+        <div class="recap-kicker">NVIDIA Visionary Research Award</div>
+        <ul class="recap-list">
+            <li><span class="recap-medal">&#127941;</span><div><span class="recap-place">Yuheng Shi</span> <span class="recap-author">University of Sydney</span><br><i class="recap-paper">Catching the Details: Self-Distilled RoI Predictors for Fine-Grained MLLM Perception</i> &middot; <span class="recap-venue">ICLR 2026</span></div></li>
+        </ul>
+        <p class="recap-note"><strong>How it was selected:</strong> by a panel of academics and researchers &mdash; Jack Yang (University of Wollongong), Xuyun Zhang (Macquarie University), Mingsong Li (UNSW Sydney), Chang Xu (University of Sydney) and Xiangpeng Yang (University of Technology Sydney).</p>
     </div>
-    <div class="recap-card recap-info">
+    <div class="recap-card recap-awards">
+        <div class="recap-kicker">Best Poster Awards</div>
+        <p class="recap-text">Winners to be announced.</p>
+        <p class="recap-note"><strong>How they were selected:</strong> through attendee voting, bringing together perspectives from our community of students, academics, researchers and industry professionals. These awards celebrate posters that sparked curiosity, inspired thoughtful discussion and captured the interest of the Sydney AI community.</p>
+    </div>
+    <div class="recap-card recap-info recap-span">
         <div class="recap-info-row">
             <div class="recap-kicker">Registration</div>
             <a class="recap-link" href="https://docs.google.com/forms/d/e/1FAIpQLSfTUBXwzVmtK9N5TDReEVbY8Arm96jbsK16bgw5mb1K0Bxkpw/viewform" target="_blank">Registration form &rarr;</a>
